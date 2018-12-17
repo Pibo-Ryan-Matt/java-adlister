@@ -41,24 +41,25 @@
             <div class="uk-width-1-2 uk-margin-small-top">
                 <div class="uk-card uk-card-default uk-card-body">
                     <h3 class="uk-card-title">User Ads <a href="ads/create" class="uk-position-top-right uk-position-large" uk-icon="plus"></a></h3>
-                        <div class="uk-grid">
+                    <div class="uk-grid">
 
-
-                            <c:forEach var="ad" items="${ads}">
-                                <c:choose>
-                                    <c:when test="${sessionScope.user.id == ad.userId}">
-                                        <div class="uk-card uk-card-default uk-card-body uk-margin-small-left uk-margin-small-right">
+                        <c:forEach var="ad" items="${ads}">
+                            <c:choose>
+                                <c:when test="${sessionScope.user.id == ad.userId}">
+                                    <form action="" method="POST" id="adForm${ad.id}">
+                                        <div class="uk-card uk-card-default uk-card-body uk-margin-small-left uk-margin-small-right" onclick="javascript:document.getElementById('adForm${ad.id}').submit();">
                                             <div class="uk-width-extend">
                                                 <h3>${ad.title}</h3>
                                                 <p>${ad.description}</p>
+                                                <input type="hidden" style="display: none" name="selected-ad-id" value="${ad.id}" />
                                             </div>
                                         </div>
-                                    </c:when>
-                                    <c:otherwise />
-                                </c:choose>
-                            </c:forEach>
-
-                        </div>
+                                    </form>
+                                </c:when>
+                                <c:otherwise />
+                            </c:choose>
+                        </c:forEach>
+                    </div>
                 </div>
             </div>
         </div>
