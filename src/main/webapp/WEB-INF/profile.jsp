@@ -43,13 +43,19 @@
                     <h3 class="uk-card-title">User Ads <a class="uk-position-top-right uk-position-large" uk-icon="plus"></a></h3>
                         <div class="uk-grid">
 
+
                             <c:forEach var="ad" items="${ads}">
-                                <div class="uk-card uk-card-default uk-card-body">
-                                    <div class="uk-width-1-2">
-                                        <h3>${ad.title}</h3>
-                                        <p>${ad.description}</p>
-                                    </div>
-                                </div>
+                                <c:choose>
+                                    <c:when test="${sessionScope.user.id == ad.userId}">
+                                        <div class="uk-card uk-card-default uk-card-body">
+                                            <div class="uk-width-1-2">
+                                                <h3>${ad.title}</h3>
+                                                <p>${ad.description}</p>
+                                            </div>
+                                        </div>
+                                    </c:when>
+                                    <c:otherwise />
+                                </c:choose>
                             </c:forEach>
 
                         </div>
