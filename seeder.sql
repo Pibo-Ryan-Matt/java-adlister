@@ -14,3 +14,5 @@ INSERT INTO ad (title, description, user_id, category) VALUES
 
 
 select * from ad;
+
+UPDATE user SET username = 'ryan', password = 'ryan', email = 'ryan@gmail.com' WHERE id = 4;

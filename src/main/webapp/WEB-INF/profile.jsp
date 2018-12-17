@@ -18,10 +18,10 @@
                 <div class="uk-card uk-card-default uk-card-body">
                     <div class="uk-grid">
                         <div class="uk-width-1-3">
-                            <p><Strong>Username: </Strong>
+                            <p><Strong>Username: ${sessionScope.user.username}</Strong>
                         </div>
                         <div class="uk-width-1-3">
-                            <Strong>Email: </Strong>
+                            <Strong>Email: ${sessionScope.user.email}</Strong>
                         </div>
                         <div class="uk-width-1-3">
                             <a href="edit">Edit</a></p>
@@ -40,15 +40,15 @@
 
             <div class="uk-width-1-2 uk-margin-small-top">
                 <div class="uk-card uk-card-default uk-card-body">
-                    <h3 class="uk-card-title">User Ads <a class="uk-position-top-right uk-position-large" uk-icon="plus"></a></h3>
+                    <h3 class="uk-card-title">User Ads <a href="ads/create" class="uk-position-top-right uk-position-large" uk-icon="plus"></a></h3>
                         <div class="uk-grid">
 
 
                             <c:forEach var="ad" items="${ads}">
                                 <c:choose>
                                     <c:when test="${sessionScope.user.id == ad.userId}">
-                                        <div class="uk-card uk-card-default uk-card-body">
-                                            <div class="uk-width-1-2">
+                                        <div class="uk-card uk-card-default uk-card-body uk-margin-small-left uk-margin-small-right">
+                                            <div class="uk-width-extend">
                                                 <h3>${ad.title}</h3>
                                                 <p>${ad.description}</p>
                                             </div>

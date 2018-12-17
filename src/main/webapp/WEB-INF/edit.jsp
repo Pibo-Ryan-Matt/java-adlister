@@ -12,16 +12,16 @@
     <div class="uk-text-center uk-grid">
         <div class="uk-width-1-1">
             <div class="uk-card uk-card-default uk-card-body">
-                <form action="/edit_profile" method="POST">
+                <form action="/edit" method="POST">
                     <div class="uk-grid">
                         <div class="uk-width-1-3">
-                            <input class="uk-input uk-form-width-medium" type="text" placeholder="Username">
+                            <input class="uk-input uk-form-width-medium" type="text" name="username" placeholder="Username">
                         </div>
                         <div class="uk-width-1-3">
-                            <input class="uk-input uk-form-width-medium" type="text" placeholder="Email">
+                            <input class="uk-input uk-form-width-medium" type="text" name="email" placeholder="Email">
                         </div>
                         <div class="uk-width-1-3">
-                            <input class="uk-input uk-form-width-medium" type="password" placeholder="Password">
+                            <input class="uk-input uk-form-width-medium" type="password" name="password" placeholder="Password">
                         </div>
                         <div class="uk-width-1-1">
                             <button class="uk-button uk-button-default uk-margin-small-top">Submit</button>
