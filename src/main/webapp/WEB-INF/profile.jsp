@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
@@ -23,7 +24,7 @@
                             <Strong>Email: </Strong>
                         </div>
                         <div class="uk-width-1-3">
-                            <a href="">Edit</a></p>
+                            <a href="edit">Edit</a></p>
                         </div>
                     </div>
                 </div>
@@ -34,22 +35,33 @@
                     <img src="img/Earth.jpg" width="512px" height="391px" />
                 </div>
             </div>
+
+            <!-- Current User Ads -->
+
             <div class="uk-width-1-2 uk-margin-small-top">
                 <div class="uk-card uk-card-default uk-card-body">
-                    <h3 class="uk-card-title">User Ads <a class="uk-position-top-right uk-position-large" href="" uk-icon="plus"></a></h3>
-                    <div class="uk-grid">
-                        <div class="uk-width-1-2">
-                            <!-- insert ad info -->
+                    <h3 class="uk-card-title">User Ads <a class="uk-position-top-right uk-position-large" uk-icon="plus"></a></h3>
+                        <div class="uk-grid">
+
+
+                            <c:forEach var="ad" items="${ads}">
+                                <c:choose>
+                                    <c:when test="${sessionScope.user.id == ad.userId}">
+                                        <div class="uk-card uk-card-default uk-card-body">
+                                            <div class="uk-width-1-2">
+                                                <h3>${ad.title}</h3>
+                                                <p>${ad.description}</p>
+                                            </div>
+                                        </div>
+                                    </c:when>
+                                    <c:otherwise />
+                                </c:choose>
+                            </c:forEach>
+
                         </div>
-                        <div class="uk-width-1-2">
-                            <!-- insert ad info -->
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-
-        <!-- Current User Ads -->
 
     </div>
 </body>
