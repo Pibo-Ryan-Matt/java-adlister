@@ -11,8 +11,15 @@ import java.io.IOException;
 
 @WebServlet(name = "controllers.AdsIndexServlet", urlPatterns = "/ads")
 public class AdsIndexServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("ads", DaoFactory.getAdsDao().all());
-        request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setAttribute("ads", DaoFactory.getAdsDao().all());
+        req.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(req, resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        long id = Long.parseLong(req.getParameter("selected-ad-id"));
+        req.getSession().setAttribute("selectedAd",  DaoFactory.getAdsDao().selectedAd(id));
+        resp.sendRedirect("/ad-page");
     }
 }
