@@ -1,6 +1,6 @@
-package com.codeup.adlister.controllers;
+package com.codeup.spacelister.controllers;
 
-import com.codeup.adlister.dao.DaoFactory;
+import com.codeup.spacelister.dao.DaoFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

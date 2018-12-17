@@ -1,8 +1,8 @@
-package com.codeup.adlister.controllers;
+package com.codeup.spacelister.controllers;
 
-import com.codeup.adlister.dao.DaoFactory;
-import com.codeup.adlister.models.User;
-import com.codeup.adlister.util.Password;
+import com.codeup.spacelister.dao.DaoFactory;
+import com.codeup.spacelister.models.User;
+import com.codeup.spacelister.util.Password;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

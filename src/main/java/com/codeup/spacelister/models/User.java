@@ -1,6 +1,6 @@
-package com.codeup.adlister.models;
+package com.codeup.spacelister.models;
 
-import com.codeup.adlister.util.Password;
+import com.codeup.spacelister.util.Password;
 
 public class User {
     private long id;

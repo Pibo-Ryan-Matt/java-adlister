@@ -1,4 +1,4 @@
-package com.codeup.adlister.models;
+package com.codeup.spacelister.models;
 
 public class Ad {
     private long id;
