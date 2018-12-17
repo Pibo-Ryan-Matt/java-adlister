@@ -1,7 +1,7 @@
 USE adlister;
 
 
-DROP TABLE IF EXISTS category;
+DROP TABLE IF EXISTS ad;
 
 CREATE TABLE user (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -14,7 +14,7 @@ CREATE TABLE user (
 CREATE TABLE ad (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     category VARCHAR(255) NOT NULL,
-    picture VARCHAR(255),
+    picture TEXT,
     title VARCHAR(255) NOT NULL,
     description TEXT NOT NULL,
     user_id INT UNSIGNED NOT NULL,

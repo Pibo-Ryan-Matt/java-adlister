@@ -25,6 +25,20 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public Ad selectedAd(long id) {
+        try {
+            String insertQuery = "SELECT * FROM ad WHERE id = ?";
+            PreparedStatement stmt = connection.prepareStatement(insertQuery);
+            stmt.setLong(1, id);
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            return extractAd(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving selected ad.", e);
+        }
+    }
+
+    @Override
     public List<Ad> all() {
         PreparedStatement stmt = null;
         try {
@@ -39,11 +53,13 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Long insert(Ad ad) {
         try {
-            String insertQuery = "INSERT INTO ad(user_id, title, description) VALUES (?, ?, ?)";
+            String insertQuery = "INSERT INTO ad(user_id, title, description, picture, category) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
             stmt.setString(2, ad.getTitle());
             stmt.setString(3, ad.getDescription());
+            stmt.setString(4, ad.getPicture());
+            stmt.setString(5, ad.getCategory());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
@@ -58,7 +74,9 @@ public class MySQLAdsDao implements Ads {
             rs.getLong("id"),
             rs.getLong("user_id"),
             rs.getString("title"),
-            rs.getString("description")
+            rs.getString("description"),
+            rs.getString("picture"),
+            rs.getString("category")
         );
     }
 
