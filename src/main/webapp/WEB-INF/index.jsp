@@ -38,35 +38,57 @@
         </div>
 
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
-    <div>
+    <div  class="uk-child-width-expand@s main uk-margin-large-top uk-margin-large-bottom uk-grid planetSide">
+        <div class="uk-width-1-2@m uk-margin-large-top uk-margin-large-bottom " uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+            <h1 class="uk-width-1-1@m uk-margin-large-left uk-padding-small">Choose your location</h1>
 
-    </div>
-    <div  class="uk-child-width-expand@s main planetSide" uk-grid>
-    <h1 class="uk-width-1-1@m ">Choose your location</h1>
 
-        <div class="uk-width-1-2@m ">
-            <ul class="uk-thumbnav uk-thumbnav-vertical" uk-margin>
-                <li><a href="#"><img src="http://pluspng.com/img-png/jupiter-planet-png-file-jupiter-transparent-png-779.png" width="100" alt=""></a></li>
-                <li><a href="#"><img src="http://wiki.bacterialtakeover.com/images/4/41/Mercury.png" width="100" alt=""></a></li>
-                <li><a href="#"><img src="https://vignette.wikia.nocookie.net/diepio/images/6/6d/Uranus_spacepedia.png/revision/latest?cb=20180601142434" width="100" alt=""></a></li>
-                <li><a href="#"><img src="https://vignette.wikia.nocookie.net/spongebob/images/f/f4/3D_Venus.png/revision/latest?cb=20181125160841" width="100" alt=""></a></li>
-                <li><a href="#"><img src="https://vignette.wikia.nocookie.net/diepio/images/0/0e/Mars_spacepedia.png/revision/latest?cb=20180601141159" width="100" alt=""></a></li>
-                <li><a href="#"><img src="https://pics.clipartpng.com/Neptune_PNG_Clip_Art-3004.png" width="100" alt=""></a></li>
+            <ul class="uk-thumbnav uk-margin-large-left uk-margin-medium-top uk-padding-small">
+                <li class="planetFloat"><a href="#"><img src="http://pluspng.com/img-png/jupiter-planet-png-file-jupiter-transparent-png-779.png" width="100" alt="">Jupiter</a></li>
+
+                <li class="planetFloat"><a href="#"><img src="http://wiki.bacterialtakeover.com/images/4/41/Mercury.png" width="100" alt="">Mercury</a></li>
             </ul>
+
+        <ul class="uk-thumbnav uk-margin-large-left uk-margin-medium-top uk-padding-small">
+                <li class="planetFloat"><a href="#"><img src="https://vignette.wikia.nocookie.net/diepio/images/6/6d/Uranus_spacepedia.png/revision/latest?cb=20180601142434" width="100" alt="">Uranus</a></li>
+                 <li class="planetFloat"><a href="#"><img src="https://vignette.wikia.nocookie.net/spongebob/images/f/f4/3D_Venus.png/revision/latest?cb=20181125160841" width="100" alt="">Venus</a></li>
+            </ul>
+        <ul class="uk-thumbnav uk-margin-large-left uk-margin-medium-top uk-padding-small">
+
+                <li class="planetFloat"><a href="#"><img src="https://vignette.wikia.nocookie.net/diepio/images/0/0e/Mars_spacepedia.png/revision/latest?cb=20180601141159" width="100" alt="">Mars</a></li>
+                <li class="planetFloat"><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/d/da/3D_Neptune.png" width="100" alt="">Neptune</a></li>
+        </ul>
+        </div>
+
+        <div class="uk-margin-large-top uk-margin-large-bottom categories uk-width-1-2@l uk-text-center" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+            <h1 class="uk-width-1-1@m uk-margin-large-left uk-padding-small">Choose your location</h1>
+            <div  class=" category uk-padding-small" >
+
+            <a href=""><i class="fas categorylogo fa-satellite"></i><h3>Space items</h3></a>
+            </div>
+            <div class=" category uk-padding-small" >
+
+            <a href=""><i class="fas categorylogo fa-globe"></i><h3>Space lands</h3></a>
+            </div>
+            <div class=" category uk-padding-small" >
+                <a href=""><i class="fas categorylogo fa-rocket"></i><h3>Space vehicles</h3></a>
+
+            </div>
+            <div class=" category uk-padding-small">
+
+            <a  href=""><i class="fab categorylogo fa-reddit-alien"></i><h3>Space jobs</h3></a>
+            </div>
+
+
+
         </div>
 
 
     </div>
 
+
+    <jsp:include page="/WEB-INF/partials/footer.jsp" />
 
     <jsp:include page="/WEB-INF/partials/scripts.jsp" />
 

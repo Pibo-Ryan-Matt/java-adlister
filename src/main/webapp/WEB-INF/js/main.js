@@ -141,3 +141,21 @@ function animate(){
 }
 animate();
 
+// / float hover
+
+$(document).on('mouseenter', '.planetFloat', function () {
+    $(this).addClass("float")
+});
+$(document).on('mouseleave', '.planetFloat', function () {
+    $(this).removeClass("float")
+});
+
+// float logo category
+
+$(document).on('mouseenter', '.category', function () {
+    $(this).find(".categorylogo").addClass("float")
+});
+$(document).on('mouseleave', '.category', function () {
+    $(this).find(".categorylogo").removeClass("float")
+});
+

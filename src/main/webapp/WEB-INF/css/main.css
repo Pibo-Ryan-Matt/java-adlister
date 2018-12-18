@@ -106,3 +106,29 @@ html, body { width:100%; height:100%; }
     margin-top: 10px;
     float: right ;
 }
+
+/*catergories*/
+
+.categories div a i {
+    color: black;
+}
+
+/*floating planets*/
+
+.float {
+    -webkit-animation-name: Floating;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes Floating{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 15px);}
+    to {-webkit-transform: translate(0, -0px);    }
+}
+footer{
+    height: 200px;
+    width: 100%;
+    background: black;
+    color: white;
+}
