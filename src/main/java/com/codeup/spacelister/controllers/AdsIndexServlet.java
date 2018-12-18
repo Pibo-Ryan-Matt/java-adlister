@@ -13,10 +13,7 @@ import java.io.IOException;
 @WebServlet(name = "controllers.AdsIndexServlet", urlPatterns = "/ads")
 public class AdsIndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Gson gson = new Gson();
-        String allAds = gson.toJson(DaoFactory.getAdsDao().all());
-
-        req.setAttribute("ads", allAds);
+        req.setAttribute("ads", DaoFactory.getAdsDao().all());
         req.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(req, resp);
     }
 
