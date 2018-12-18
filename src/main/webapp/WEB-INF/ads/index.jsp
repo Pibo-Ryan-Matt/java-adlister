@@ -12,6 +12,10 @@
 <div class="uk-container">
     <h1>Here Are all the ads!</h1>
 
+    <div class="uk-margin">
+        <input class="uk-input" type="text" placeholder="Search">
+    </div>
+
     <c:forEach var="ad" items="${ads}">
         <form action="" method="POST" id="adForm${ad.id}">
             <div class="uk-padding uk-background-muted uk-column-1-2 uk-column-divider" onclick="javascript:document.getElementById('adForm${ad.id}').submit();">

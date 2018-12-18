@@ -1,6 +1,7 @@
 package com.codeup.spacelister.controllers;
 
 import com.codeup.spacelister.dao.DaoFactory;
+import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +13,10 @@ import java.io.IOException;
 @WebServlet(name = "controllers.AdsIndexServlet", urlPatterns = "/ads")
 public class AdsIndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("ads", DaoFactory.getAdsDao().all());
+        Gson gson = new Gson();
+        String allAds = gson.toJson(DaoFactory.getAdsDao().all());
+
+        req.setAttribute("ads", allAds);
         req.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(req, resp);
     }
 

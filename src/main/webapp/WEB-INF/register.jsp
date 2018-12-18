@@ -8,26 +8,36 @@
 <body>
     <jsp:include page="partials/navbar.jsp" />
     <div class="container">
-        <h1>Please fill in your information.</h1>
-        <form action="/register" method="post">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input id="username" name="username" class="form-control" type="text">
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input id="email" name="email" class="form-control" type="text">
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input id="password" name="password" class="form-control" type="password">
-            </div>
-            <div class="form-group">
-                <label for="confirm_password">Confirm Password</label>
-                <input id="confirm_password" name="confirm_password" class="form-control" type="password">
-            </div>
-            <input type="submit" class="btn btn-primary btn-block">
-        </form>
+        <div class="uk-grid">
+            <h1>Please fill in your information.</h1>
+            <form action="/register" method="post">
+
+                <div class="uk-margin">
+                    <label for="username">Username</label>
+                    <input class="uk-input" id="username" type="text">
+                </div>
+
+                <div class="uk-margin">
+                    <label for="email">Email</label>
+                    <input class="uk-input" id="email" type="text" name="email">
+                </div>
+
+                <div class="uk-margin">
+                    <label for="password">Password</label>
+                    <input class="uk-input" id="password" type="password" name="password">
+                </div>
+
+                <div class="uk-margin">
+                    <label for="confirm_password">Email</label>
+                    <input class="uk-input" id="confirm_password" type="password" name="confirm_password">
+                </div>
+
+                <button class="uk-button uk-button-default">Submit</button>
+
+
+                <input type="submit" class="btn btn-primary btn-block">
+            </form>
+        </div>
     </div>
 </body>
 </html>
