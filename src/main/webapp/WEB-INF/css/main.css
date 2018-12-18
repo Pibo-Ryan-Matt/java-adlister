@@ -106,3 +106,9 @@ html, body { width:100%; height:100%; }
     margin-top: 10px;
     float: right ;
 }
+
+/*catergories*/
+
+.categories div a i {
+    color: black;
+}
