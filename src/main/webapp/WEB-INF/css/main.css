@@ -1,4 +1,7 @@
-
+body{
+    width: 100%;
+    box-sizing: border-box;
+}
 
 .main{
     position: relative;
@@ -202,4 +205,18 @@ footer{
 }
 .uk-navbar-center:hover , .uk-navbar-right a:hover , .uk-navbar-left a:hover {
     border-bottom: white 1px solid;
+}
+/*error*/
+
+.error{
+    width: 100%;
+}
+.btnBackHomeError{
+    background: transparent;
+    position: absolute;
+    top: 626px;
+    left: 508px;
+    height: 63px;
+    width: 265px;
+    border-radius: 20px;
 }

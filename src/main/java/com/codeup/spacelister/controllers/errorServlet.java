@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "controllers.IndexServlet", urlPatterns = "")
-public class IndexServlet extends HttpServlet {
+@WebServlet(name = "controllers.errorServlet", urlPatterns = "/")
+public class errorServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/error.jsp").forward(request, response);
     }
 }

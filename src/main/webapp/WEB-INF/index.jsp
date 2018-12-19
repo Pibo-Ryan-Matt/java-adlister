@@ -88,7 +88,25 @@
 
     </div>
     <div class="uk-grid uk-child-width-expand@s">
-        <div></div>
+        <div>
+            <div class="ufo">
+                <div class="monster" style="color: #7cb342">
+                    <div class="body">
+                        <div class="ear"></div>
+                        <div class="ear"></div>
+                        <div class="vampi-mouth">
+                            <div class="vampi-tooth"></div>
+                        </div>
+                    </div>
+                    <div class="eye-lid">
+                        <div class="eyes">
+                            <div class="eye"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
         <div class="rocket">
           <img src="https://i.ibb.co/Zf0gpty/rocket.png" alt="rocket" border="0" />

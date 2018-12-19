@@ -7,10 +7,16 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>404 error</title>
+    <jsp:include page="/WEB-INF/partials/head.jsp">
+        <jsp:param name="title" value="SpaceLIster!" />
+    </jsp:include>
 </head>
 <body>
-Page not found!!!
+
+<img src="https://i.ibb.co/6YKFPpb/404-page-cow-abduction-freebies-a6.jpg" class="error">
+
+<a href="/"><div class="btnBackHomeError">
+
+</div></a>
 </body>
 </html>
