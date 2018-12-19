@@ -26,7 +26,7 @@ public class Ad {
     }
 
     public long getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(long id) {
@@ -34,7 +34,7 @@ public class Ad {
     }
 
     public long getUserId() {
-        return userId;
+        return this.userId;
     }
 
     public void setUserId(long userId) {
@@ -42,7 +42,7 @@ public class Ad {
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -50,7 +50,7 @@ public class Ad {
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public void setDescription(String description) {
@@ -58,7 +58,7 @@ public class Ad {
     }
 
     public String getPicture() {
-        return picture;
+        return this.picture;
     }
 
     public void setPicture(String picture) {
@@ -66,7 +66,7 @@ public class Ad {
     }
 
     public String getCategory() {
-        return category;
+        return this.category;
     }
 
     public void setCategory(String category) {

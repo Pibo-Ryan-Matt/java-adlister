@@ -1,11 +1,7 @@
 package com.codeup.spacelister.controllers;
 
-
-import com.codeup.spacelister.dao.Ads;
 import com.codeup.spacelister.dao.DaoFactory;
-import com.codeup.spacelister.dao.MySQLUsersDao;
 import com.codeup.spacelister.models.Ad;
-import com.codeup.spacelister.models.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,39 +10,38 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-
-@WebServlet(name = "controllers.EditAdServlet", urlPatterns = "/editAd")
+@WebServlet(urlPatterns = "/editAd")
 public class EditAdServlet extends HttpServlet {
-
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        request.getSession().getAttribute("adEdit");
         request.getRequestDispatcher("/WEB-INF/editAd.jsp").forward(request, response);
 
-
     }
 
-
+    @Override
     protected void doPost (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
+        Ad newAD = (Ad) request.getSession().getAttribute("adEdit");
 
-        Ad ad = (Ad) request.getSession().getAttribute("Ad");
-
-        if (!request.getParameter("Title").isEmpty()) {
-            ad.setTitle(request.getParameter("Title"));
+        if (!request.getParameter("title").isEmpty()) {
+            newAD.setTitle(request.getParameter("title"));
         }
-        if (!request.getParameter("Description").isEmpty()) {
-            ad.setDescription(request.getParameter("Description"));
+        if (!request.getParameter("description").isEmpty()) {
+            newAD.setDescription(request.getParameter("description"));
         }
-        if (!request.getParameter("Category").isEmpty()) {
-            ad.setCategory(request.getParameter("Category"));
+        if (!request.getParameter("category").isEmpty()) {
+            newAD.setCategory(request.getParameter("category"));
         }
-        if (!request.getParameter("Planet").isEmpty()) {
-            ad.setPicture(request.getParameter("Planet"));
+        if (!request.getParameter("planet").isEmpty()) {
+            newAD.setPicture(request.getParameter("planet"));
         }
 
-
-        DaoFactory.getAdsDao().update(ad);
+        DaoFactory.getAdsDao().update(newAD);
+        response.sendRedirect("/profile");
 
     }
+
+
 
 }
