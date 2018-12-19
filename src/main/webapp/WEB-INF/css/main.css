@@ -1,8 +1,9 @@
-html, body { width:100%; height:100%; }
+
 
 .main{
     position: relative;
     top: 100px;
+    margin-bottom: 200px;
 }
 
 
@@ -99,12 +100,14 @@ html, body { width:100%; height:100%; }
 }
 
 /*//planets side*/
-
 .planetSide img{
     height: 100px;
     width: 100px;
     margin-top: 10px;
     float: right ;
+}
+.planetSide{
+    margin-bottom: 200px ;
 }
 
 /*catergories*/
@@ -131,4 +134,41 @@ footer{
     width: 100%;
     background: black;
     color: white;
+}
+
+/*// rocket*/
+.rocket img{
+    height: 350px;
+    position: relative;
+    left: 100px;
+}
+.smoke{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: black solid 1px;
+}
+.smoke:nth-child(1) , .smoke:nth-child(3) , .smoke:nth-child(5), .smoke:nth-child(7){
+    position: relative;
+    top: 37px;
+
+}
+.smoke:nth-child(2) , .smoke:nth-child(4) , .smoke:nth-child(6){
+    position: relative;
+    top: 27px;
+}
+.floatSmoke {
+    -webkit-animation-name: FloatingSmoke;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes FloatingSmoke{
+    10% {-webkit-transform:translate(0, 0px);}
+    35% {-webkit-transform:translate(0, -15px);}
+    60% {-webkit-transform: translate(0, -0px);    }
+    85% {-webkit-transform:translate(0, -20px);}
+    100% {-webkit-transform:translate(0, -5px);}
+
+
 }

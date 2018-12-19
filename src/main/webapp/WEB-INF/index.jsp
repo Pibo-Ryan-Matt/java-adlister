@@ -17,7 +17,7 @@
         </canvas>
     </canvas>
 
-    <div  class="uk-child-width-expand@s uk-text-center uk-grid-match main" uk-grid>
+    <div  class="uk-child-width-expand@s  uk-text-center uk-grid-match main" uk-grid>
         <div>
             <div class="uk-card   uk-card-body">
                 <div class="planet">
@@ -39,12 +39,13 @@
 
     </div>
 
-    <div  class="uk-child-width-expand@s main uk-margin-large-top uk-margin-large-bottom uk-grid planetSide">
-        <div class="uk-width-1-2@m uk-margin-large-top uk-margin-large-bottom " uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
-            <h1 class="uk-width-1-1@m uk-margin-large-left uk-padding-small">Choose your location</h1>
+    <div  class="uk-child-width-expand@s  main uk-grid planetSide">
+
+        <div class="uk-width-1-2@m uk-margin-large-top uk-margin-large-bottom uk-text-center " uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+            <h1 class="uk-width-1-1@m uk-padding-small">Choose your location</h1>
 
 
-            <ul class="uk-thumbnav uk-margin-large-left uk-margin-medium-top uk-padding-small">
+            <ul class="uk-thumbnav uk-margin-large-left uk-margin-large-top uk-padding-small">
                 <li class="planetFloat"><a href="#"><img src="http://pluspng.com/img-png/jupiter-planet-png-file-jupiter-transparent-png-779.png" width="100" alt="">Jupiter</a></li>
 
                 <li class="planetFloat"><a href="#"><img src="http://wiki.bacterialtakeover.com/images/4/41/Mercury.png" width="100" alt="">Mercury</a></li>
@@ -85,6 +86,26 @@
         </div>
 
 
+    </div>
+    <div class="uk-grid uk-child-width-expand@s">
+        <div></div>
+
+        <div class="rocket">
+          <img src="https://i.ibb.co/Zf0gpty/rocket.png" alt="rocket" border="0" />
+          <div class="uk-grid uk-child-width-expand@s">
+
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+              <div class="smoke"></div>
+
+          </div>
+
+        </div>
+        <div></div>
     </div>
 
 
