@@ -4,6 +4,10 @@ USE adlister;
 
 DROP TABLE IF EXISTS ad;
 DROP TABLE user;
+DROP TABLE planet;
+DROP TABLE ad_planet;
+
+
 CREATE TABLE user (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     username VARCHAR(240) UNIQUE NOT NULL,
