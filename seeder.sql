@@ -12,19 +12,13 @@ INSERT INTO ad (title, description, user_id, category) VALUES
       ('Lipstick', 'Best shades of colors', 2, 'Space Item'),
       ('Looking for hot singles?', 'Lonely, call 1-888-400-5555', 2, 'Space Jobs');
 
-INSERT INTO planet (name) VALUES
-       ('Jupiter'),
-       ('Mercury'),
-       ('Uranus'),
-       ('Venus'),
-       ('Mars'),
-       ('Neptune');
-
-INSERT INTO category (name) VALUES
-                                   ('Space Items'),
-                                   ('Space Property'),
-                                   ('Space Vehicles'),
-                                   ('Space Jobs');
+INSERT INTO planet (name, url) VALUES
+       ('Jupiter', 'http://pluspng.com/img-png/jupiter-planet-png-file-jupiter-transparent-png-779.png'),
+       ('Mercury', 'http://wiki.bacterialtakeover.com/images/4/41/Mercury.png'),
+       ('Uranus', 'https://vignette.wikia.nocookie.net/diepio/images/6/6d/Uranus_spacepedia.png/revision/latest?cb=20180601142434'),
+       ('Venus', 'https://vignette.wikia.nocookie.net/spongebob/images/f/f4/3D_Venus.png/revision/latest?cb=20181125160841'),
+       ('Mars', 'https://vignette.wikia.nocookie.net/diepio/images/0/0e/Mars_spacepedia.png/revision/latest?cb=20180601141159'),
+       ('Neptune', 'https://upload.wikimedia.org/wikipedia/commons/d/da/3D_Neptune.png');
 
 select * from ad;
 

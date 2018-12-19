@@ -16,19 +16,20 @@
 
 
     <div class="uk-grid">
-        <div class="uk-card uk-card-default uk-card-hover uk-width-1-2">
+        <div class="uk-card uk-card-default uk-card-hover uk-width-1-3 uk-margin-medium-bottom">
             <div class="uk-card-body">
                 <h3 class="uk-card-title">${sessionScope.selectedAd.title}</h3>
             </div>
         </div>
-        <div class="uk-card uk-card-default uk-card-hover uk-width-1-2">
+        <div class="uk-width-expand"></div>
+        <div class="uk-card uk-card-default uk-card-hover uk-width-auto uk-margin-medium-bottom">
             <div class="uk-card-body">
                 <h3 class="uk-card-title">${sessionScope.selectedAd.category}</h3>
             </div>
         </div>
         <div class="uk-width-1-2">
             <div class="uk-grid">
-                <div class="uk-card uk-card-default uk-card-hover uk-width-1-1">
+                <div class="uk-card uk-card-default uk-card-hover uk-width-auto">
                     <div class="uk-card-body">
                         <p>${sessionScope.selectedAd.description}</p>
                     </div>
