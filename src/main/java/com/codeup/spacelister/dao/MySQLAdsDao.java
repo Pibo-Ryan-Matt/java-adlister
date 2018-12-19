@@ -51,9 +51,15 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public List<Ad> search(String searchTerm) {
+    public List<Ad> search(String searchTerm, int searchLocation) {
         try {
-            String insertQuery = "SELECT * FROM ad WHERE title LIKE ?";
+            String insertQuery;
+            if (searchLocation == 1){
+                insertQuery = "SELECT * FROM ad WHERE title LIKE ?";
+            } else if (searchLocation == 2){
+                insertQuery = "SELECT * FROM ad WHERE category LIKE ?";
+            }
+
             PreparedStatement stmt = connection.prepareStatement(insertQuery);
             String searchTermWithWildcards = "%" + searchTerm + "%";
             stmt.setString(1, searchTermWithWildcards);
