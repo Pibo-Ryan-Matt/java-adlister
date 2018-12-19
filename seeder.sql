@@ -12,6 +12,19 @@ INSERT INTO ad (title, description, user_id, category) VALUES
       ('Lipstick', 'Best shades of colors', 2, 'space'),
       ('Looking for hot singles?', 'Lonely, call 1-888-400-5555', 2, 'space');
 
+INSERT INTO planet (name) VALUES
+       ('Jupiter'),
+       ('Mercury'),
+       ('Uranus'),
+       ('Venus'),
+       ('Mars'),
+       ('Neptune');
+
+INSERT INTO category (name) VALUES
+                                   ('Space Items'),
+                                   ('Space Property'),
+                                   ('Space Vehicles'),
+                                   ('Space Jobs');
 
 select * from ad;
 

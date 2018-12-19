@@ -24,16 +24,21 @@ CREATE TABLE ad (
     FOREIGN KEY (user_id) REFERENCES user (id)
 );
 
-# CREATE TABLE ad_category (
-#     ad_id INTEGER UNSIGNED NOT NULL,
-#     cat_id INTEGER UNSIGNED NOT NULL,
-#     FOREIGN KEY (ad_id) REFERENCES ad (id),
-#     FOREIGN KEY (cat_id) REFERENCES category(id)
-# );
+CREATE TABLE planet (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+  name VARCHAR(240) NOT NULL
+);
+
+CREATE TABLE ad_planet (
+    ad_id INT UNSIGNED NOT NULL,
+    planet_id INT NOT NULL,
+    FOREIGN KEY (ad_id) REFERENCES ad (id),
+    FOREIGN KEY (planet_id) REFERENCES planet(id)
+);
 
 
-# CREATE TABLE category (
-#     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-#     name VARCHAR(255) NOT NULL,
-#     PRIMARY KEY (id)
-# );
+CREATE TABLE category (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
