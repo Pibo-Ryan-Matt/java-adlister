@@ -3,11 +3,12 @@ USE adlister;
 
 
 DROP TABLE IF EXISTS ad;
-
+DROP TABLE user;
 CREATE TABLE user (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     username VARCHAR(240) UNIQUE NOT NULL,
     email VARCHAR(240) UNIQUE NOT NULL,
+    planet VARCHAR(240),
     password VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 );

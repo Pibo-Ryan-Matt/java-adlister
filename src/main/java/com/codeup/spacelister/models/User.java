@@ -7,21 +7,28 @@ public class User {
     private String username;
     private String email;
     private String password;
+    private String planet;
 
     public User() {}
 
-    public User(String username, String email, String password) {
+    public User(String username, String email, String password, String planet) {
         this.username = username;
         this.email = email;
         setPassword(password);
+        this.planet = planet;
     }
 
-    public User(long id, String username, String email, String password) {
+    public User(long id, String username, String email, String password, String planet) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
+        this.planet = planet;
     }
+
+    public String getPlanet() { return planet; }
+
+    public void setPlanet(String planet) { this.planet = planet;}
 
     public long getId() {
         return id;

@@ -22,6 +22,17 @@
                     <input class="uk-input" id="email" type="text" name="email">
                 </div>
 
+                <div class="uk-width-1-1">
+                    <select class="uk-select" name="planet">
+                        <option>Jupiter</option>
+                        <option>Mercury</option>
+                        <option>Uranus</option>
+                        <option>Venus</option>
+                        <option>Mars</option>
+                        <option>Neptune</option>
+                    </select>
+                </div>
+
                 <div class="uk-margin">
                     <label for="password">Password</label>
                     <input class="uk-input" id="password" type="password" name="password">
