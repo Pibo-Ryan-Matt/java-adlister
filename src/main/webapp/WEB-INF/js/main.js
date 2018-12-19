@@ -159,3 +159,12 @@ $(document).on('mouseleave', '.category', function () {
     $(this).find(".categorylogo").removeClass("float")
 });
 
+//smoke rocket on scroll
+
+$( window ).scroll(function() {
+    $( ".smoke" ).addClass("floatSmoke");
+    setTimeout(function () {
+        $( ".smoke" ).removeClass("floatSmoke");
+    },2500)
+});
+
