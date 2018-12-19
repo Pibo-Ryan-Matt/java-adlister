@@ -14,7 +14,13 @@
     <h1>Here Are all the ads!</h1>
 
     <div class="uk-margin">
-        <input class="uk-input" type="text" placeholder="Search">
+        <form action="/search" method="POST">
+            <input class="uk-input" type="text" placeholder="Search" name="search">
+            <button uk-icon="search" type="submit"></button>
+        </form>
+        <form action="/ads" method="GET">
+            <button class="uk-button uk-button-primary" type="submit">View All</button>
+        </form>
     </div>
 
     <c:forEach var="ad" items="${ads}">
