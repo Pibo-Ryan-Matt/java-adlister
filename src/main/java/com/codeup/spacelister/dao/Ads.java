@@ -11,4 +11,5 @@ public interface Ads {
     Long insert(Ad ad);
     // get a single add
     Ad selectedAd(long id);
+    void update(Ad ad);
 }
