@@ -34,7 +34,7 @@ public class EditAdServlet extends HttpServlet {
             newAD.setCategory(request.getParameter("category"));
         }
         if (!request.getParameter("planet").isEmpty()) {
-            newAD.setPicture(request.getParameter("planet"));
+            newAD.setPlanet(request.getParameter("planet"));
         }
 
         DaoFactory.getAdsDao().update(newAD);

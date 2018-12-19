@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS ad;
 DROP TABLE user;
 DROP TABLE planet;
 DROP TABLE ad_planet;
-
+DROP TABLE category;
 
 CREATE TABLE user (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -30,7 +30,8 @@ CREATE TABLE ad (
 
 CREATE TABLE planet (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-  name VARCHAR(240) NOT NULL
+  name VARCHAR(240) NOT NULL,
+  url VARCHAR(240)
 );
 
 CREATE TABLE ad_planet (
@@ -40,9 +41,3 @@ CREATE TABLE ad_planet (
     FOREIGN KEY (planet_id) REFERENCES planet(id)
 );
 
-
-CREATE TABLE category (
-    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    name VARCHAR(255) NOT NULL,
-    PRIMARY KEY (id)
-);
