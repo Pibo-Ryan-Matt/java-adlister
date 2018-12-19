@@ -64,23 +64,38 @@
 
         <div class="uk-margin-large-top uk-margin-large-bottom categories uk-width-1-2@l uk-text-center" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
             <h1 class="uk-width-1-1@m uk-margin-large-left uk-padding-small">Choose your location</h1>
-            <div  class=" category uk-padding-small" >
 
-            <a href=""><i class="fas categorylogo fa-satellite"></i><h3>Space items</h3></a>
-            </div>
-            <div class=" category uk-padding-small" >
+            <form action="/search" method="POST">
+                <input type="hidden" style="display: none" name="searchLocation" value="2" />
+                <input type="hidden" style="display: none" name="search" value="Space Items" />
+                <div  class=" category uk-padding-small" >
+                    <button type="submit"><i class="fas categorylogo fa-satellite"></i><h3>Space items</h3></button>
+                </div>
+            </form>
 
-            <a href=""><i class="fas categorylogo fa-globe"></i><h3>Space lands</h3></a>
-            </div>
-            <div class=" category uk-padding-small" >
-                <a href=""><i class="fas categorylogo fa-rocket"></i><h3>Space vehicles</h3></a>
+            <form action="/search" method="POST">
+                <input type="hidden" style="display: none" name="searchLocation" value="2" />
+                <input type="hidden" style="display: none" name="search" value="Space Property" />
+                <div class=" category uk-padding-small" >
+                    <button type="submit"><i class="fas categorylogo fa-globe"></i><h3>Space property</h3></button>
+                </div>
+            </form>
 
-            </div>
-            <div class=" category uk-padding-small">
+            <form action="/search" method="POST">
+                <input type="hidden" style="display: none" name="searchLocation" value="2" />
+                <input type="hidden" style="display: none" name="search" value="Space Vehicles" />
+                <div class=" category uk-padding-small" >
+                    <button type="submit"><i class="fas categorylogo fa-rocket"></i><h3>Space vehicles</h3></button>
+                </div>
+            </form>
 
-            <a  href=""><i class="fab categorylogo fa-reddit-alien"></i><h3>Space jobs</h3></a>
-            </div>
-
+            <form action="/search" method="POST">
+                <input type="hidden" style="display: none" name="searchLocation" value="2" />
+                <input type="hidden" style="display: none" name="search" value="Space Jobs" />
+                <div class=" category uk-padding-small">
+                    <button type="submit"><i class="fab categorylogo fa-reddit-alien"></i><h3>Space jobs</h3></button>
+                </div>
+            </form>
 
 
         </div>

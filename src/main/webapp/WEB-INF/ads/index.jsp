@@ -16,6 +16,7 @@
     <div class="uk-margin">
         <form action="/search" method="POST">
             <input class="uk-input" type="text" placeholder="Search" name="search">
+            <input type="hidden" style="display: none" name="searchLocation" value="1" />
             <button uk-icon="search" type="submit"></button>
         </form>
         <form action="/ads" method="GET">
