@@ -30,7 +30,7 @@
         <div class="uk-width-1-2 uk-margin-small-top">
             <div class="uk-card uk-card-default uk-card-body">
                 <h3 class="uk-card-title">Your Home Planet Is..</h3>
-                <img src="img/Earth.jpg" width="512px" height="391px" />
+                <img src="${sessionScope.user.planet}" width="512px" height="391px" />
             </div>
         </div>
         <!-- Current User Ads -->
