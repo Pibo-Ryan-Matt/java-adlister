@@ -1,3 +1,4 @@
+CREATE database adlister;
 USE adlister;
 
 
@@ -28,6 +29,7 @@ CREATE TABLE ad (
 #     FOREIGN KEY (ad_id) REFERENCES ad (id),
 #     FOREIGN KEY (cat_id) REFERENCES category(id)
 # );
+
 
 # CREATE TABLE category (
 #     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
