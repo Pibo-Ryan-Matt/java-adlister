@@ -163,8 +163,13 @@ $(document).on('mouseleave', '.category', function () {
 
 $( window ).scroll(function() {
     $( ".smoke" ).addClass("floatSmoke");
-    setTimeout(function () {
+    $(".rocket img").addClass("rocketVibrate");
+});
+$(window).scroll(function() {
+    clearTimeout($.data(this, 'scrollTimer'));
+    $.data(this, 'scrollTimer', setTimeout(function() {
         $( ".smoke" ).removeClass("floatSmoke");
-    },2500)
+        $(".rocket img").removeClass("rocketVibrate");
+    }, 1250));
 });
 

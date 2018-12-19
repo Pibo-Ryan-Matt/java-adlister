@@ -121,7 +121,7 @@
 .float {
     -webkit-animation-name: Floating;
     -webkit-animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: 2;
     -webkit-animation-timing-function: ease-in-out;
 }
 @-webkit-keyframes Floating{
@@ -142,7 +142,22 @@ footer{
     position: relative;
     left: 100px;
 }
+
+/*rcket vibrate*/
+.rocketVibrate {
+    -webkit-animation-name: vibrate;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 5;
+    -webkit-animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes vibrate{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, -15px);}
+    to {-webkit-transform: translate(0, -0px);    }
+}
+
 .smoke{
+
     display: inline-block;
     height: 50px;
     width: 50px;
@@ -160,8 +175,8 @@ footer{
 }
 .floatSmoke {
     -webkit-animation-name: FloatingSmoke;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 2;
 }
 @-webkit-keyframes FloatingSmoke{
     10% {-webkit-transform:translate(0, 0px);}
@@ -171,4 +186,20 @@ footer{
     100% {-webkit-transform:translate(0, -5px);}
 
 
+}
+
+.uk-navbar-nav li a , .uk-logo , nav {
+    font-family: 'Staatliches', cursive;
+    color: white;
+    background: black;
+}
+
+.uk-logo{
+    font-size: xx-large;
+}
+.uk-navbar-nav li a {
+    font-size: x-large;
+}
+.uk-navbar-center:hover , .uk-navbar-right a:hover , .uk-navbar-left a:hover {
+    border-bottom: white 1px solid;
 }

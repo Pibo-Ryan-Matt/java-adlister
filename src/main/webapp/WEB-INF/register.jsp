@@ -7,14 +7,14 @@
 </head>
 <body>
     <jsp:include page="partials/navbar.jsp" />
-    <div class="container">
+    <div class="uk-container">
         <div class="uk-grid">
             <h1>Please fill in your information.</h1>
-            <form action="/register" method="post">
+            <form action="" method="POST">
 
                 <div class="uk-margin">
                     <label for="username">Username</label>
-                    <input class="uk-input" id="username" type="text">
+                    <input class="uk-input" id="username" type="text" name="username">
                 </div>
 
                 <div class="uk-margin">
@@ -28,14 +28,12 @@
                 </div>
 
                 <div class="uk-margin">
-                    <label for="confirm_password">Email</label>
+                    <label for="confirm_password">Confirm Password</label>
                     <input class="uk-input" id="confirm_password" type="password" name="confirm_password">
                 </div>
 
-                <button class="uk-button uk-button-default">Submit</button>
+                <button type="submit" class="uk-button uk-button-default">Submit</button>
 
-
-                <input type="submit" class="btn btn-primary btn-block">
             </form>
         </div>
     </div>
