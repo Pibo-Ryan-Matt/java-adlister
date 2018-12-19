@@ -78,7 +78,7 @@ public class MySQLAdsDao implements Ads {
             stmt.setLong(1, ad.getUserId());
             stmt.setString(2, ad.getTitle());
             stmt.setString(3, ad.getDescription());
-            stmt.setString(4, ad.getPicture());
+            stmt.setString(4, ad.getPlanet());
             stmt.setString(5, ad.getCategory());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
@@ -95,7 +95,7 @@ public class MySQLAdsDao implements Ads {
             rs.getLong("user_id"),
             rs.getString("title"),
             rs.getString("description"),
-            rs.getString("picture"),
+            rs.getString("planet"),
             rs.getString("category")
         );
     }
@@ -109,13 +109,13 @@ public class MySQLAdsDao implements Ads {
     }
 
     public void update(Ad ad) {
-        String query = "UPDATE ad SET title = ?, description = ?, category = ?, picture = ? WHERE id = ?";
+        String query = "UPDATE ad SET title = ?, description = ?, category = ?, planet = ? WHERE id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, ad.getTitle());
             stmt.setString(2, ad.getDescription());
             stmt.setString(3, ad.getCategory());
-            stmt.setString(4, ad.getPicture());
+            stmt.setString(4, ad.getPlanet());
             stmt.setLong(5, ad.getId());
             stmt.executeUpdate();
         } catch (SQLException e) {

@@ -5,23 +5,23 @@ public class Ad {
     private long userId;
     private String title;
     private String description;
-    private String picture;
+    private String planet;
     private String category;
 
-    public Ad(long id, long userId, String title, String description, String picture, String category) {
+    public Ad(long id, long userId, String title, String description, String planet, String category) {
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
-        this.picture = picture;
+        this.planet = planet;
         this.category = category;
     }
 
-    public Ad(long userId, String title, String description, String picture, String category) {
+    public Ad(long userId, String title, String description, String planet, String category) {
         this.userId = userId;
         this.title = title;
         this.description = description;
-        this.picture = picture;
+        this.planet = planet;
         this.category = category;
     }
 
@@ -57,12 +57,12 @@ public class Ad {
         this.description = description;
     }
 
-    public String getPicture() {
-        return this.picture;
+    public String getPlanet() {
+        return this.planet;
     }
 
-    public void setPicture(String picture) {
-        this.picture = picture;
+    public void setPlanet(String planet) {
+        this.planet = planet;
     }
 
     public String getCategory() {
