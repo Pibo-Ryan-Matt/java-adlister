@@ -25,13 +25,13 @@ public class EditProfileServlet extends HttpServlet {
 
        User user = (User) request.getSession().getAttribute("user");
 
-       if (request.getParameter("username") != null) {
-       user.setUsername(request.getParameter("username"));
+       if (!request.getParameter("username").isEmpty()) {
+           user.setUsername(request.getParameter("username"));
        }
-       if (request.getParameter("username") != null) {
+       if (!request.getParameter("email").isEmpty()) {
            user.setEmail(request.getParameter("email"));
        }
-       if (request.getParameter("username") != null) {
+       if (!request.getParameter("password").isEmpty()) {
            user.setPassword(request.getParameter("password"));
        }
 
