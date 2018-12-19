@@ -4,28 +4,40 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Create a new Ad" />
     </jsp:include>
+    <jsp:include page="/WEB-INF/partials/scripts.jsp" />
 </head>
 <body>
-    <div class="container">
+<jsp:include page="../partials/navbar.jsp" />
+<div class="container">
+
+    <form action="/ads/create" method="POST" class="uk-position-center uk-margin-top">
         <h1>Create a new Ad</h1>
-        <form action="/ads/create" method="post">
-            <div class="form-group">
-                <label for="title">Title</label>
-                <input id="title" name="title" class="form-control" type="text">
-            </div>
-            <div class="form-group">
-                <label for="category">Category</label>
-                <input id="category" name="category" class="form-control" type="text">
-            </div>
-            <div class="form-group">
-                <label for="description">Description</label>
-                <textarea id="description" name="description" class="form-control" type="text"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="picture">Picture URL</label>
-                <input id="picture" name="picture" class="form-control" type="text"/>
-            </div>
-            <input type="submit" class="btn btn-block btn-primary">
+        <div class="uk-margin">
+            <label for="title">Title</label>
+            <input class="uk-input" id="title" type="text" name="title">
+        </div>
+        <div class="uk-width-1-1">
+            <select class="uk-select" name="category">
+                <option>Space Items</option>
+                <option>Space Property</option>
+                <option>Space Vehicles</option>
+                <option>Space Jobs</option>
+            </select>
+        </div>
+        <div class="uk-width-1-1 uk-margin-small-top">
+            <textarea class="uk-textarea" rows="5" placeholder="description" name="description"></textarea>
+        </div>
+        <div class="uk-width-1-1 uk-margin-small-top">
+            <select class="uk-select" name="planet">
+                <option>Jupiter</option>
+                <option>Mercury</option>
+                <option>Uranus</option>
+                <option>Venus</option>
+                <option>Mars</option>
+                <option>Neptune</option>
+            </select>
+        </div>
+        <button class="uk-button uk-width-1-1 uk-button-default uk-margin-small-top">Submit</button>
         </form>
     </div>
 </body>

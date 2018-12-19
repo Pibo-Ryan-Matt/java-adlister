@@ -26,9 +26,10 @@
                         <div class="uk-width-1-2">
                             <div class="uk-width-1-1 uk-margin-medium-bottom">
                                 <select class="uk-select" name="category">
-                                    <option>Exploration</option>
-                                    <option>Buying</option>
-                                    <option>Selling</option>
+                                    <option>Space Items</option>
+                                    <option>Space Property</option>
+                                    <option>Space Vehicles</option>
+                                    <option>Space Jobs</option>
                                 </select>
                             </div>
                             <div class="uk-width-1-1">
