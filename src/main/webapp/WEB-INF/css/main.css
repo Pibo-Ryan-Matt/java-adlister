@@ -139,6 +139,11 @@ footer{
     color: white;
 }
 
+.custom-btn {
+    background-color: white;
+    border-style: hidden;
+}
+
 /*// rocket*/
 .rocket img{
     height: 350px;

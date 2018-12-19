@@ -15,17 +15,16 @@ public class AdsSearchServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getSession().setAttribute("searchLocation",  req.getParameter("searchLocation"));
-        int searchLocation = (int) req.getSession().getAttribute("searchLocation");
-
+        String searchLocation = (String) req.getSession().getAttribute("searchLocation");
 
         req.getSession().setAttribute("searchTerm",  req.getParameter("search"));
         String searchTerm = (String) req.getSession().getAttribute("searchTerm");
 
-        if (searchLocation == 1){
+        if (searchLocation.equalsIgnoreCase("1")){
             req.setAttribute("ads", DaoFactory.getAdsDao().search(searchTerm, 1));
 
         } else {
-            req.setAttribute("ads", DaoFactory.getAdsDao().search(searchTerm, 1));
+            req.setAttribute("ads", DaoFactory.getAdsDao().search(searchTerm, 2));
         }
 
 
