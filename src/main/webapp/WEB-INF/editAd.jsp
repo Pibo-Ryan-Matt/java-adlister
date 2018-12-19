@@ -32,14 +32,14 @@
                         </div>
                         <div class="uk-width-1-2">
                             <div class="uk-width-1-1 uk-margin-medium-bottom">
-                                <select class="uk-select">
+                                <select class="uk-select" name="Category">
                                     <option>Exploration</option>
                                     <option>Buying</option>
                                     <option>Selling</option>
                                 </select>
                             </div>
                             <div class="uk-width-1-1">
-                                <select class="uk-select">
+                                <select class="uk-select" name="Planet">
                                     <option>Jupiter</option>
                                     <option>Mercury</option>
                                     <option>Uranus</option>
@@ -49,7 +49,7 @@
                                 </select>
                             </div>
                             <div class="uk-width-1-1">
-                                <button class="uk-button uk-button-default uk-margin-small-top uk-position-bottom-right">Submit</button>
+                                <button class="uk-button uk-button-default uk-margin-small-top uk-position-bottom-right uk-position-large">Submit</button>
                             </div>
                         </div>
                     </div>

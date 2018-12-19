@@ -87,4 +87,19 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+
+    public void update(Ad ad) {
+        String query = "UPDATE ad SET title = ?, description = ?, category = ?, picture = ? WHERE id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, ad.getTitle());
+            stmt.setString(2, ad.getDescription());
+            stmt.setString(3, ad.getCategory());
+            stmt.setString(4, ad.getPicture());
+            stmt.setLong(5, ad.getId());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding a user by username", e);
+        }
+    }
 }
