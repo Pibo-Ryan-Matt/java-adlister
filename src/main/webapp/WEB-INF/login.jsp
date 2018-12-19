@@ -17,8 +17,8 @@
             </div>
 
             <div class="uk-margin">
-                <label for="password">Email</label>
-                <input class="uk-input" id="password" type="text" name="password">
+                <label for="password">Password</label>
+                <input class="uk-input" id="password" type="password" name="password">
             </div>
 
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
