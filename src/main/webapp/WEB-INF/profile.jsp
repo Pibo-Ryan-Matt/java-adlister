@@ -41,16 +41,20 @@
                     <c:forEach var="ad" items="${ads}">
                         <c:choose>
                             <c:when test="${sessionScope.user.id == ad.userId}">
-                                <form action="" method="POST" id="adForm${ad.id}">
-                                    <div class="uk-card uk-card-default uk-card-body uk-margin-small-left uk-margin-small-right" onclick="javascript:document.getElementById('adForm${ad.id}').submit();">
-                                        <div class="uk-width-extend">
-                                            <a href="editAd" uk-icon="pencil" class="uk-position-top-right uk-position-small"></a>
-                                            <h3>${ad.title}</h3>
-                                            <p>${ad.description}</p>
-                                            <input type="hidden" style="display: none" name="selected-ad-id" value="${ad.id}" />
-                                        </div>
-                                    </div>
-                                </form>
+                                <div class="uk-card uk-card-default uk-card-body uk-margin-small-left uk-margin-small-right" onclick="javascript:document.getElementById('adForm${ad.id}').submit();">
+                                    <form action="" method="POST">
+                                        <a href="editAd" uk-icon="pencil" class="uk-position-top-right uk-position-small"></a>
+                                        <input type="hidden" style="display: none" name="edit-or-view" value="edit"/>
+                                    </form>
+                                    <form action="" method="POST" id="adForm${ad.id}">
+                                            <div class="uk-width-extend">
+                                                <h3>${ad.title}</h3>
+                                                <p>${ad.description}</p>
+                                                <input type="hidden" style="display: none" name="selected-ad-id" value="${ad.id}" />
+                                                <input type="hidden" style="display: none" name="edit-or-view" value="view"/>
+                                            </div>
+                                    </form>
+                                </div>
                             </c:when>
                             <c:otherwise />
                         </c:choose>
