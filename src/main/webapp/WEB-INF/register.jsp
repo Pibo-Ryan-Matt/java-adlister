@@ -4,14 +4,14 @@
     <jsp:include page="partials/head.jsp">
         <jsp:param name="title" value="Register For Our Site!" />
     </jsp:include>
+    <jsp:include page="/WEB-INF/partials/scripts.jsp" />
 </head>
 <body>
     <jsp:include page="partials/navbar.jsp" />
-    <div class="uk-container">
-        <div class="uk-grid">
-            <h1>Please fill in your information.</h1>
-            <form action="" method="POST">
+    <div class="container">
 
+            <form action="" method="POST" class="uk-position-center uk-margin-top">
+                <h1>Please fill in your information.</h1>
                 <div class="uk-margin">
                     <label for="username">Username</label>
                     <input class="uk-input" id="username" type="text" name="username">
@@ -35,7 +35,6 @@
                 <button type="submit" class="uk-button uk-button-default">Submit</button>
 
             </form>
-        </div>
     </div>
 </body>
 </html>
