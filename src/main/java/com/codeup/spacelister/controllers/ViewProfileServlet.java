@@ -24,17 +24,19 @@ public class ViewProfileServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String hiddenParam = req.getParameter("selected-ad-id");
-        long id = Long.parseLong(hiddenParam);
-        req.getSession().setAttribute("selectedAd",  DaoFactory.getAdsDao().selectedAd(id));
-
         String editOrView = req.getParameter("edit-or-view");
 
 
         if (editOrView.equalsIgnoreCase("edit")){
+            String hiddenParam = req.getParameter("selectedAdEdit");
+            long id = Long.parseLong(hiddenParam);
+            req.getSession().setAttribute("adEdit" , DaoFactory.getAdsDao().selectedAd(id));
             resp.sendRedirect("/editAd");
 
         } else if (editOrView.equalsIgnoreCase("view")){
+            String hiddenParam = req.getParameter("selected-ad-id");
+            long id = Long.parseLong(hiddenParam);
+            req.getSession().setAttribute("selectedAd",  DaoFactory.getAdsDao().selectedAd(id));
             resp.sendRedirect("/ad-page");
 
         }

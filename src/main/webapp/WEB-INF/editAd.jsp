@@ -9,7 +9,6 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-<h1>${sessionScope.editAd.title}</h1>
 <div class="uk-container">
     <div class="uk-text-center uk-grid">
         <div class="uk-width-1-1">
@@ -18,10 +17,10 @@
                     <div class="uk-grid">
                         <div class="uk-width-1-2">
                             <div class="uk-width-xlarge uk-margin-medium-bottom">
-                                <input class="uk-input uk-form-width-large" type="text" name="title" placeholder="${sessionScope.editAd.title}">
+                                <input class="uk-input uk-form-width-large" type="text" name="title" placeholder="${sessionScope.adEdit.title}">
                             </div>
                             <div class="uk-width-1-1">
-                                <textarea class="uk-textarea" rows="5" placeholder="${sessionScope.editAd.description}" name="description"></textarea>
+                                <textarea class="uk-textarea" rows="5" placeholder="${sessionScope.adEdit.description}" name="description"></textarea>
                             </div>
                         </div>
                         <div class="uk-width-1-2">

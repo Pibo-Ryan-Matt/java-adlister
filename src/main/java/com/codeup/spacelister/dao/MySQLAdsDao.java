@@ -99,7 +99,7 @@ public class MySQLAdsDao implements Ads {
             stmt.setLong(5, ad.getId());
             stmt.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException("Error finding a user by username", e);
+            throw new RuntimeException("Error updating ad!", e);
         }
     }
 }

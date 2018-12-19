@@ -41,15 +41,16 @@
                     <c:forEach var="ad" items="${ads}">
                         <c:choose>
                             <c:when test="${sessionScope.user.id == ad.userId}">
-                                <div class="uk-card uk-card-default uk-card-body uk-margin-small-left uk-margin-small-right" onclick="javascript:document.getElementById('adForm${ad.id}').submit();">
-                                    <form action="" method="POST">
-                                        <a href="editAd" uk-icon="pencil" class="uk-position-top-right uk-position-small"></a>
+                                <div class="uk-card uk-card-default uk-card-body uk-margin-small-left uk-margin-small-right uk-width-1-2" onclick="javascript:document.getElementById('adForm${ad.id}').submit();">
+                                    <form action="" method="POST" id="editForm${ad.id}">
+                                        <button type="submit" uk-icon="pencil" class="uk-position-top-right uk-position-small"></button>
                                         <input type="hidden" style="display: none" name="edit-or-view" value="edit"/>
+                                        <input type="hidden" style="display: none" name="selectedAdEdit" value="${ad.id}" />
                                     </form>
                                     <form action="" method="POST" id="adForm${ad.id}">
                                             <div class="uk-width-extend">
                                                 <h3>${ad.title}</h3>
-                                                <p>${ad.description}</p>
+                                                <p style="overflow-wrap: break-word;">${ad.description}</p>
                                                 <input type="hidden" style="display: none" name="selected-ad-id" value="${ad.id}" />
                                                 <input type="hidden" style="display: none" name="edit-or-view" value="view"/>
                                             </div>

@@ -14,6 +14,7 @@ import java.io.IOException;
 public class EditAdServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getSession().getAttribute("adEdit");
         request.getRequestDispatcher("/WEB-INF/editAd.jsp").forward(request, response);
 
     }
@@ -21,22 +22,24 @@ public class EditAdServlet extends HttpServlet {
     @Override
     protected void doPost (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
-        Ad ad = (Ad) request.getSession().getAttribute("selectedAd");
+        Ad newAD = (Ad) request.getSession().getAttribute("adEdit");
 
         if (!request.getParameter("title").isEmpty()) {
-            ad.setTitle(request.getParameter("title"));
+            newAD.setTitle(request.getParameter("title"));
         }
         if (!request.getParameter("description").isEmpty()) {
-            ad.setDescription(request.getParameter("Description"));
+            newAD.setDescription(request.getParameter("description"));
         }
         if (!request.getParameter("category").isEmpty()) {
-            ad.setCategory(request.getParameter("category"));
+            newAD.setCategory(request.getParameter("category"));
         }
         if (!request.getParameter("planet").isEmpty()) {
-            ad.setPicture(request.getParameter("planet"));
+            newAD.setPicture(request.getParameter("planet"));
         }
-        DaoFactory.getAdsDao().update(ad);
+
+        DaoFactory.getAdsDao().update(newAD);
         response.sendRedirect("/profile");
+
     }
 
 
