@@ -15,6 +15,7 @@ public class AdPageServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getSession().getAttribute("selectedAd");
+        req.setAttribute("planets", DaoFactory.getAdsDao().all());
         req.getRequestDispatcher("/WEB-INF/ads/ad-page.jsp").forward(req, resp);
     }
 }

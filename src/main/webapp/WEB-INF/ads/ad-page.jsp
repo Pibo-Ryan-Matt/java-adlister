@@ -37,13 +37,14 @@
             </div>
         </div>
         <div class="uk-width-1-2">
-            <c:forEach var="planets" items="${sessionScope.selectedAd.planet}"/>
+            <c:forEach var="planets" items="${sessionScope.selectedAd.planet}">
             <div class="uk-width-1-3 uk-margin-small-top">
                 <div class="uk-card uk-card-default uk-card-body">
                     <img src="${sessionScope.planet.url}" alt="">
                     <h3>${sessionScope.planet.name}</h3>
                 </div>
             </div>
+            </c:forEach>
         </div>
     </div>
 </div>
