@@ -10,7 +10,7 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <form action="/login" method="POST" class="uk-position-center">
-            <h1>Please Log In</h1>
+            <h1>Please Login</h1>
             <div class="uk-margin">
                 <label for="username">Username</label>
                 <input class="uk-input" id="username" type="text" name="username">
@@ -21,7 +21,7 @@
                 <input class="uk-input" id="password" type="password" name="password">
             </div>
 
-            <input type="submit" class="btn btn-primary btn-block" value="Log In">
+            <button type="submit" class="uk-button uk-button-default">Submit</button>
         </form>
     </div>
 </body>
