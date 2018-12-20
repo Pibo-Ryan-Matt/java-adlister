@@ -1,8 +1,12 @@
 body{
     width: 100%;
     box-sizing: border-box;
-}
 
+}
+*{
+    font-family: 'Oswald', sans-serif;
+
+}
 .main{
     position: relative;
     top: 100px;
@@ -219,9 +223,9 @@ footer{
 .btnBackHomeError{
     background: transparent;
     position: absolute;
-    top: 626px;
-    left: 508px;
-    height: 63px;
-    width: 265px;
+    top: 493px;
+    left: 553px;
+    height: 37px;
+    width: 170px;
     border-radius: 20px;
 }
