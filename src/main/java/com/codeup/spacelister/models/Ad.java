@@ -1,27 +1,26 @@
 package com.codeup.spacelister.models;
 
+import java.util.List;
+
 public class Ad {
     private long id;
     private long userId;
     private String title;
     private String description;
-    private String planet;
     private String category;
 
-    public Ad(long id, long userId, String title, String description, String planet, String category) {
+    public Ad(long id, long userId, String title, String description, String category) {
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
-        this.planet = planet;
         this.category = category;
     }
 
-    public Ad(long userId, String title, String description, String planet, String category) {
+    public Ad(long userId, String title, String description, String category) {
         this.userId = userId;
         this.title = title;
         this.description = description;
-        this.planet = planet;
         this.category = category;
     }
 
@@ -55,14 +54,6 @@ public class Ad {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getPlanet() {
-        return this.planet;
-    }
-
-    public void setPlanet(String planet) {
-        this.planet = planet;
     }
 
     public String getCategory() {

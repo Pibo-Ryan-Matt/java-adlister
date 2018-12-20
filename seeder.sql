@@ -26,7 +26,7 @@ UPDATE user SET username = 'ryan', password = 'ryan', email = 'ryan@gmail.com' W
 
 INSERT INTO ad_planet (planet_id, ad_id) VALUES (1, 8);
 
-SELECT name
+SELECT url
 FROM planet
 WHERE id in (
     select planet_id
@@ -34,6 +34,6 @@ WHERE id in (
     WHERE ad_id in (
       select id
       from ad
-      WHERE title = 'Space Stuff for Sale'
+      WHERE ad.id = 4
         )
     );

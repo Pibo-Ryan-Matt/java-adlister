@@ -33,14 +33,14 @@
                                 </select>
                             </div>
                             <div class="uk-width-1-1">
-                                <select class="uk-select" name="planet">
-                                    <option>Jupiter</option>
-                                    <option>Mercury</option>
-                                    <option>Uranus</option>
-                                    <option>Venus</option>
-                                    <option>Mars</option>
-                                    <option>Neptune</option>
-                                </select>
+                                <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                    <label><input value="Jupiter" name="planet" class="uk-checkbox" type="checkbox">Jupiter</label>
+                                    <label><input value="Mercury" name="planet" class="uk-checkbox" type="checkbox">Mercury</label>
+                                    <label><input value="Uranus" name="planet" class="uk-checkbox" type="checkbox">Uranus</label>
+                                    <label><input value="Venus" name="planet" class="uk-checkbox" type="checkbox">Venus</label>
+                                    <label><input value="Mars" name="planet" class="uk-checkbox" type="checkbox">Mars</label>
+                                    <label><input value="Neptune" name="planet" class="uk-checkbox" type="checkbox">Neptune</label>
+                                </div>
                             </div>
                             <div class="uk-width-1-1">
                                 <button type="submit" class="uk-button uk-button-default uk-margin-small-top uk-position-bottom-right uk-position-large">Submit</button>
