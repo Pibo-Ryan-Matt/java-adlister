@@ -23,3 +23,17 @@ INSERT INTO planet (name, url) VALUES
 select * from ad;
 
 UPDATE user SET username = 'ryan', password = 'ryan', email = 'ryan@gmail.com' WHERE id = 4;
+
+INSERT INTO ad_planet (planet_id, ad_id) VALUES (1, 8);
+
+SELECT name
+FROM planet
+WHERE id in (
+    select planet_id
+    from ad_planet
+    WHERE ad_id in (
+      select id
+      from ad
+      WHERE title = 'Space Stuff for Sale'
+        )
+    );
