@@ -4,6 +4,3 @@
 <script>
     <%@include file="../js/main.js"%>
 </script>
-<script>
-    <%@include file="../js/navbar.js"%>
-</script>

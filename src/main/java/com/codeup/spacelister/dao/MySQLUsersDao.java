@@ -5,6 +5,8 @@ import com.codeup.spacelister.util.Config;
 import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MySQLUsersDao implements Users {
     private Connection connection;
@@ -32,6 +34,30 @@ public class MySQLUsersDao implements Users {
             return extractUser(stmt.executeQuery());
         } catch (SQLException e) {
             throw new RuntimeException("Error finding a user by username", e);
+        }
+    }
+
+    @Override
+    public List<String> findDuplicates(int location) {
+        String query;
+        String columnLabel;
+        if (location == 1){
+            query = "SELECT username FROM user";
+            columnLabel = "username";
+        } else {
+            query = "SELECT email FROM user";
+            columnLabel = "email";
+        }
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            ResultSet rs = stmt.executeQuery();
+            List<String> allResults = new ArrayList<>();
+            while (rs.next()){
+                allResults.add(rs.getString(columnLabel));
+            }
+            return allResults;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error generating duplication check list.", e);
         }
     }
 
