@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "controllers.errorServlet", urlPatterns = "/")
-public class errorServlet extends HttpServlet {
+public class ErrorServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 //        StringBuffer url = request.getRequestURL() ;
 //
