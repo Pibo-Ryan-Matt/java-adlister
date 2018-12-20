@@ -17,7 +17,7 @@
             <input class="uk-input" id="title" type="text" name="title">
         </div>
         <div class="uk-width-1-1">
-            <select class="uk-select" name="category">
+            <select title="category" class="uk-select" name="category">
                 <option>Space Items</option>
                 <option>Space Property</option>
                 <option>Space Vehicles</option>
@@ -28,7 +28,7 @@
             <textarea class="uk-textarea" rows="5" placeholder="description" name="description"></textarea>
         </div>
         <div class="uk-width-1-1 uk-margin-small-top">
-            <select class="uk-select" name="planet">
+            <select title="planet" class="uk-select" name="planet" multiple>
                 <option>Jupiter</option>
                 <option>Mercury</option>
                 <option>Uranus</option>
