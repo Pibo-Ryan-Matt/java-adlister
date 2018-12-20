@@ -20,7 +20,7 @@ public interface Ads {
 
     void addToPlanetAds(int Planet, Long ID);
 
-    void deleteFromPlanets (Long ID);
+    void deleteEntry (Long ID, int queryString);
 
     List<Planet> getAdPlanets (Long ID);
 }

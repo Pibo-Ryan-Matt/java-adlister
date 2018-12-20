@@ -37,7 +37,7 @@ public class EditAdServlet extends HttpServlet {
         }
         if (!request.getParameter("planet").isEmpty()){
             List<String> planets = Arrays.asList(request.getParameterValues("planet"));
-            DaoFactory.getAdsDao().deleteFromPlanets(newAD.getId());
+            DaoFactory.getAdsDao().deleteEntry(newAD.getId(), 1);
             for (String planet : planets){
                 DaoFactory.getAdsDao().addToPlanetAds(DaoFactory.getAdsDao().getPlanetID(planet), newAD.getId());
             }
