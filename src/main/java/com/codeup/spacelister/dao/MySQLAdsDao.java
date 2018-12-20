@@ -4,6 +4,7 @@ import com.codeup.spacelister.models.Ad;
 import com.codeup.spacelister.util.Config;
 import com.mysql.cj.jdbc.Driver;
 
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -122,4 +123,37 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error updating ad!", e);
         }
     }
+
+    public int getPlanetID (String planet) {
+        String query = "SELECT id from planet WHERE name = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, planet);
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            return rs.getInt("id");
+        } catch (SQLException e) {
+            throw new RuntimeException("Error getting planet ID", e);
+        }
+    }
+
+    public void addToPlanetAds (int planet, Long ID) {
+        String query = "INSERT INTO ad_planet (planet_id, ad_id) VALUES (?, ?)";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setInt(1, planet);
+            stmt.setLong(2, ID);
+            stmt.executeUpdate();
+//            ResultSet rs = stmt.getGeneratedKeys();
+//            rs.next();
+//            return rs.getLong(1);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating planet_ad", e);
+        }
+    }
+
+    public static void main(String[] args) {
+        DaoFactory.getAdsDao().getPlanetID("Jupiter");
+    }
+
 }

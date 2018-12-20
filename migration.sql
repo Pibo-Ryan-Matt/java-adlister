@@ -41,3 +41,5 @@ CREATE TABLE ad_planet (
     FOREIGN KEY (planet_id) REFERENCES planet(id)
 );
 
+SELECT id from planet where name = "Mercury";
+
