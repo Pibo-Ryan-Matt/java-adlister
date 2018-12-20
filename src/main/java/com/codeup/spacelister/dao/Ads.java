@@ -14,4 +14,8 @@ public interface Ads {
     // get a single add
     Ad selectedAd(long id);
     void update(Ad ad);
+
+    int getPlanetID (String planet);
+
+    void addToPlanetAds(int Planet, Long ID);
 }
