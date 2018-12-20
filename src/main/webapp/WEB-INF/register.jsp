@@ -56,6 +56,7 @@
                 </div>
 
                 <div class="uk-width-1-1">
+                    <label for="email">Home Planet</label>
                     <select title="planet" class="uk-select" name="planet">
                         <option>Jupiter</option>
                         <option>Mercury</option>
