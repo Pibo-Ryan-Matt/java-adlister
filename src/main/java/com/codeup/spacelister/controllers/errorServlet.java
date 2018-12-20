@@ -10,6 +10,12 @@ import java.io.IOException;
 @WebServlet(name = "controllers.errorServlet", urlPatterns = "/")
 public class errorServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+//        StringBuffer url = request.getRequestURL() ;
+//
+//        if (url.indexOf(".jsp") >= 0){
+//            request.getRequestDispatcher("/WEB-INF/error.jsp").forward(request, response);
+//        }
         request.getRequestDispatcher("/WEB-INF/error.jsp").forward(request, response);
+
     }
 }

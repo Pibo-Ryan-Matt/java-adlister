@@ -1,7 +1,7 @@
 <footer>
     <div class="uk-grid ">
         <div class="uk-width-1-2@l uk-text-center">
-            <p>©Copyright 2018</p>
+            <p>Copyright 2018</p>
 
             <p>
                 contact us

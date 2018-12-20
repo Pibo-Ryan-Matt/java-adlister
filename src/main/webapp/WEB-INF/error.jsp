@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<img src="https://i.ibb.co/6YKFPpb/404-page-cow-abduction-freebies-a6.jpg" class="error">
+<img src="https://i.ibb.co/F7NDQq0/404-page-cow-abduction-freebies-a6.jpg" class="error">
 
 <a href="/"><div class="btnBackHomeError">
 
