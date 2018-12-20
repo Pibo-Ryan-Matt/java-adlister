@@ -11,24 +11,28 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="uk-container">
-    <h1>Here Are all the ads!</h1>
 
-    <div class="uk-margin">
-        <form action="/search" method="POST">
-            <input class="uk-input" type="text" placeholder="Search" name="search">
-            <input type="hidden" style="display: none" name="searchLocation" value="1" />
-            <button uk-icon="search" type="submit"></button>
-        </form>
-        <form action="/ads" method="GET">
-            <button class="uk-button uk-button-primary" type="submit">View All</button>
-        </form>
-    </div>
+    <section>
+        <h1>Here Are all the ads!</h1>
+        <div class="uk-margin">
+            <form action="/search" method="POST">
+                <input class="uk-input" type="text" placeholder="Search" name="search">
+                <input type="hidden" style="display: none" name="searchLocation" value="1" />
+                <button uk-icon="search" type="submit"></button>
+            </form>
+            <form action="/ads" method="GET">
+                <button class="uk-button uk-button-primary" type="submit">View All</button>
+            </form>
+        </div>
+    </section>
+
+
 
     <c:forEach var="ad" items="${ads}">
         <form action="" method="POST" id="adForm${ad.id}">
             <div class="uk-padding uk-background-muted uk-column-1-2 uk-column-divider" onclick="javascript:document.getElementById('adForm${ad.id}').submit();">
                 <h2>${ad.title}</h2>
-                <p>${ad.description}</p>
+                <h6>${ad.category}</h6>
                 <input type="hidden" style="display: none" name="selected-ad-id" value="${ad.id}" />
             </div>
         </form>
