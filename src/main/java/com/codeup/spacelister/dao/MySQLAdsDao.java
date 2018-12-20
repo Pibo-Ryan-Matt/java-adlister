@@ -150,8 +150,13 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public void deleteFromPlanets (Long ID){
-        String query = "DELETE from ad_planet where ad_id = ?";
+    public void deleteEntry (Long ID, int queryString){
+        String query;
+        if (queryString == 1){
+            query = "DELETE from ad_planet where ad_id = ?";
+        } else {
+            query = "DELETE from ad where id = ?";
+        }
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setLong(1, ID);
