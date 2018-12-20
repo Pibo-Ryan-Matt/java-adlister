@@ -1,6 +1,7 @@
 package com.codeup.spacelister.dao;
 
 import com.codeup.spacelister.models.Ad;
+import com.codeup.spacelister.models.Planet;
 
 import java.util.List;
 
@@ -18,4 +19,8 @@ public interface Ads {
     int getPlanetID (String planet);
 
     void addToPlanetAds(int Planet, Long ID);
+
+    void deleteFromPlanets (Long ID);
+
+    List<Planet> getAdPlanets (Long ID);
 }

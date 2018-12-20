@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 @WebServlet(urlPatterns = "/editAd")
 public class EditAdServlet extends HttpServlet {
@@ -33,9 +35,14 @@ public class EditAdServlet extends HttpServlet {
         if (!request.getParameter("category").isEmpty()) {
             newAD.setCategory(request.getParameter("category"));
         }
-        if (!request.getParameter("planet").isEmpty()) {
-            newAD.setPlanet(request.getParameter("planet"));
+        if (!request.getParameter("planet").isEmpty()){
+            List<String> planets = Arrays.asList(request.getParameterValues("planet"));
+            DaoFactory.getAdsDao().deleteFromPlanets(newAD.getId());
+            for (String planet : planets){
+                DaoFactory.getAdsDao().addToPlanetAds(DaoFactory.getAdsDao().getPlanetID(planet), newAD.getId());
+            }
         }
+
 
         DaoFactory.getAdsDao().update(newAD);
         response.sendRedirect("/profile");

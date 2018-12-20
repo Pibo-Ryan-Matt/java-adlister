@@ -1,6 +1,7 @@
 package com.codeup.spacelister.dao;
 
 import com.codeup.spacelister.models.Ad;
+import com.codeup.spacelister.models.Planet;
 import com.codeup.spacelister.util.Config;
 import com.mysql.cj.jdbc.Driver;
 
@@ -74,13 +75,12 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Long insert(Ad ad) {
         try {
-            String insertQuery = "INSERT INTO ad(user_id, title, description, planet, category) VALUES (?, ?, ?, ?, ?)";
+            String insertQuery = "INSERT INTO ad(user_id, title, description, category) VALUES (?, ?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
             stmt.setString(2, ad.getTitle());
             stmt.setString(3, ad.getDescription());
-            stmt.setString(4, ad.getPlanet());
-            stmt.setString(5, ad.getCategory());
+            stmt.setString(4, ad.getCategory());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
@@ -96,7 +96,6 @@ public class MySQLAdsDao implements Ads {
             rs.getLong("user_id"),
             rs.getString("title"),
             rs.getString("description"),
-            rs.getString("planet"),
             rs.getString("category")
         );
     }
@@ -110,20 +109,20 @@ public class MySQLAdsDao implements Ads {
     }
 
     public void update(Ad ad) {
-        String query = "UPDATE ad SET title = ?, description = ?, category = ?, planet = ? WHERE id = ?";
+        String query = "UPDATE ad SET title = ?, description = ?, category = ? WHERE id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, ad.getTitle());
             stmt.setString(2, ad.getDescription());
             stmt.setString(3, ad.getCategory());
-            stmt.setString(4, ad.getPlanet());
-            stmt.setLong(5, ad.getId());
+            stmt.setLong(4, ad.getId());
             stmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Error updating ad!", e);
         }
     }
 
+    @Override
     public int getPlanetID (String planet) {
         String query = "SELECT id from planet WHERE name = ?";
         try {
@@ -137,6 +136,7 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    @Override
     public void addToPlanetAds (int planet, Long ID) {
         String query = "INSERT INTO ad_planet (planet_id, ad_id) VALUES (?, ?)";
         try {
@@ -144,16 +144,39 @@ public class MySQLAdsDao implements Ads {
             stmt.setInt(1, planet);
             stmt.setLong(2, ID);
             stmt.executeUpdate();
-//            ResultSet rs = stmt.getGeneratedKeys();
-//            rs.next();
-//            return rs.getLong(1);
         } catch (SQLException e) {
             throw new RuntimeException("Error updating planet_ad", e);
         }
     }
 
-    public static void main(String[] args) {
-        DaoFactory.getAdsDao().getPlanetID("Jupiter");
+    @Override
+    public void deleteFromPlanets (Long ID){
+        String query = "DELETE from ad_planet where ad_id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, ID);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating planet_ad", e);
+        }
     }
+
+    @Override
+    public List<Planet> getAdPlanets (Long ID){
+        String query = "SELECT url, name FROM planet WHERE id in (select planet_id from ad_planet WHERE ad_id in (select id from ad WHERE ad.id = ? ))";
+        List<Planet> planetUrls = new ArrayList<>();
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, ID);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()){
+                planetUrls.add(new Planet(rs.getString("name"), rs.getString("url")));
+            }
+            return planetUrls;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating planet_ad", e);
+        }
+    }
+
 
 }

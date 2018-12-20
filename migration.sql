@@ -8,6 +8,7 @@ DROP TABLE planet;
 DROP TABLE ad_planet;
 DROP TABLE category;
 
+
 CREATE TABLE user (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     username VARCHAR(240) UNIQUE NOT NULL,
@@ -20,7 +21,6 @@ CREATE TABLE user (
 CREATE TABLE ad (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     category VARCHAR(255) NOT NULL,
-    planet TEXT,
     title VARCHAR(255) NOT NULL,
     description TEXT NOT NULL,
     user_id INT UNSIGNED NOT NULL,
