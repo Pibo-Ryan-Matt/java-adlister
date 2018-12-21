@@ -13,6 +13,12 @@ import java.io.IOException;
 public class AdsSearchServlet extends HttpServlet {
 
     @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getSession().setAttribute("ads", DaoFactory.getAdsDao().all());
+        resp.sendRedirect("/ads");
+    }
+
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getSession().setAttribute("searchLocation",  req.getParameter("searchLocation"));
         String searchLocation = (String) req.getSession().getAttribute("searchLocation");
