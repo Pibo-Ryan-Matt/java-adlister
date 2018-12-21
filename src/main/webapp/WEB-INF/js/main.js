@@ -173,3 +173,6 @@ $(window).scroll(function() {
     }, 1250));
 });
 
+//about function for typing
+
+

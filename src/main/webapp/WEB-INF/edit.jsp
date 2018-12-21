@@ -11,7 +11,7 @@
 <div class="uk-container">
     <div class="uk-text-center uk-grid">
         <div class="uk-width-1-1">
-            <div class="uk-card uk-card-default uk-card-body">
+            <div class="uk-card uk-card-secondary uk-card-body">
                 <form action="" method="POST">
                     <div class="uk-grid">
                         <div class="uk-width-1-3">

@@ -1,11 +1,13 @@
-body{
-    width: 100%;
-    box-sizing: border-box;
-
+body , html{
+    max-width: 100%;
+    overflow-x: hidden;
 }
 *{
     font-family: 'Oswald', sans-serif;
 
+}
+.wraper {
+width: 100%;
 }
 .main{
     position: relative;
@@ -112,6 +114,13 @@ body{
     width: 100px;
     margin-top: 10px;
     float: right ;
+    margin-left: 5px;
+}
+.planetSide label{
+    float: left;
+    width: 100px;
+    text-align: right;
+    color: black;
 }
 .planetSide{
     margin-bottom: 200px ;
@@ -121,6 +130,10 @@ body{
 
 .categories div a i {
     color: black;
+}
+.category button i{
+    font-size: 40px;
+
 }
 
 /*floating planets*/
@@ -135,12 +148,6 @@ body{
     from {-webkit-transform:translate(0, 0px);}
     65% {-webkit-transform:translate(0, 15px);}
     to {-webkit-transform: translate(0, -0px);    }
-}
-footer{
-    height: 200px;
-    width: 100%;
-    background: black;
-    color: white;
 }
 
 .custom-btn {
@@ -229,50 +236,74 @@ footer{
     width: 170px;
     border-radius: 20px;
 }
+/*spaceSHip*/
+
+.spaceShip{
+    position: relative;
+    top: 100px;
+    height: 300px;
+}
+.humanIcon{
+    position: absolute;
+    height: 50px;
+    top: 2060px;
+    left: 936px;
+}
+.floatInfinit {
+    -webkit-animation-name: Floatingin;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes Floatingin{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 15px);}
+    to {-webkit-transform: translate(0, -0px);    }
+}
+
+/*footer*/
+footer{
+    height: 200px;
+    width: 100%;
+    background: black;
+    color: white;
+}
+footer ul{
+    line-height: 200px;
+}
+
+footer ul a{
+    color: white;
+}
+footer ul li:hover{
+    border-bottom: white 1px solid;
+}
 
 
+/*about*/
 
+.aboutMsg {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+            typing 3.5s steps(40, end),
+            blink-caret .75s step-end infinite;
+}
 
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
 /*Ads Index Page*/
 
 .ad-cat {

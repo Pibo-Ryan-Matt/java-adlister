@@ -1,11 +1,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
-    <nav class="uk-navbar-container uk-margin" style="position: relative; z-index: 980; background: black" uk-navbar>
+    <nav class="uk-navbar-container uk-margin" style="position: relative; z-index: 980; background: black ; width: 100%" uk-navbar>
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
                 <li><a href="/">Home</a></li>
-                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
             </ul>
         </div>
                 <div class="uk-navbar-center">
