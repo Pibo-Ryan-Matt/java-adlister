@@ -38,7 +38,7 @@
             </div>
         </div>
         <button class="uk-button uk-width-1-1 uk-button-default uk-margin-small-top">Submit</button>
-        </form>
-    </div>
+    </form>
+</div>
 </body>
 </html>

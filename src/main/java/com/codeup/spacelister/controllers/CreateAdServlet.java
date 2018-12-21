@@ -47,7 +47,7 @@ public class CreateAdServlet extends HttpServlet {
             DaoFactory.getAdsDao().addToPlanetAds(DaoFactory.getAdsDao().getPlanetID(planet), adId);
 
         }
-        response.sendRedirect("/ads");
+        response.sendRedirect("/search");
 
     }
 
