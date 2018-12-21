@@ -6,44 +6,44 @@
         <jsp:param name="title" value="Viewing All The Ads"/>
     </jsp:include>
     <jsp:include page="/WEB-INF/partials/scripts.jsp"/>
+    <style>
+        .text {
+            color: white;
+        }
+    </style>
 </head>
-<body>
+<body class="uk-background-secondary text">
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
 
 <div class="uk-container">
-    <h1 class="uk-text-center">Here is your add!</h1>
-
+    <h1 class="uk-text-center text"><strong>${sessionScope.selectedAd.title}</strong></h1>
 
     <div class="uk-grid">
-        <div class="uk-card uk-card-default uk-card-hover uk-width-1-3 uk-margin-medium-bottom">
-            <div class="uk-card-body uk-text-center">
-                <h3 class="uk-card-title">${sessionScope.selectedAd.title}</h3>
-            </div>
+        <div class="uk-width-1-1 uk-text-center">
+            <h1 class="text"><i>Category</i></h1>
         </div>
-        <div class="uk-width-expand"></div>
-        <div class="uk-card uk-card-default uk-card-hover uk-width-auto uk-margin-medium-bottom">
-            <div class="uk-card-body uk-text-center">
-                <h3 class="uk-card-title">${sessionScope.selectedAd.category}</h3>
-            </div>
+    </div>
+    <div class="uk-grid">
+        <div class="uk-width-1-1 uk-text-center uk-margin-medium-bottom">
+            <h3 class="uk-card-title uk-margin-small-left text">${sessionScope.selectedAd.category}</h3>
         </div>
         <div class="uk-width-1-2">
-            <div class="uk-grid">
-                <div class="uk-card uk-card-default uk-card-hover uk-width-auto">
-                    <div class="uk-card-body uk-text-center">
+            <h1 class="uk-text-center text"><i>Description</i></h1>
+                <div class="uk-text-center uk-margin-medium-bottom">
                         <p>${sessionScope.selectedAd.description}</p>
-                    </div>
                 </div>
-            </div>
         </div>
+
 
         <%--planet images--%>
         <div class="uk-width-1-2">
+            <h1 class="uk-text-center text"><i>Available Planets</i></h1>
             <div class="uk-grid-medium uk-child-width-expand@s uk-text-center" uk-grid>
                 <c:forEach var="planet" items="${planets}">
-                    <div class="uk-card uk-card-default uk-card-body">
-                        <img src="${planet.url}" alt="">
-                        <h3>${planet.name}</h3>
+                    <div class="uk-text-center">
+                        <img src="${planet.url}" height="100px" width="100px" alt="">
+                        <h3 class="text">${planet.name}</h3>
                     </div>
                 </c:forEach>
             </div>

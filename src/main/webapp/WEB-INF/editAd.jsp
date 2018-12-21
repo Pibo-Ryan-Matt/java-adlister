@@ -12,7 +12,7 @@
 <div class="uk-container">
     <div class="uk-text-center uk-grid">
         <div class="uk-width-1-1">
-            <div class="uk-card uk-card-default uk-card-body">
+            <div class="uk-card uk-card-secondary uk-card-body">
                 <form action="" method="POST">
                     <div class="uk-grid">
                         <div class="uk-width-1-2">
@@ -34,12 +34,12 @@
                             </div>
                             <div class="uk-width-1-1">
                                 <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                                    <label><input value="Jupiter" name="planet" class="uk-checkbox" type="checkbox">Jupiter</label>
-                                    <label><input value="Mercury" name="planet" class="uk-checkbox" type="checkbox">Mercury</label>
-                                    <label><input value="Uranus" name="planet" class="uk-checkbox" type="checkbox">Uranus</label>
-                                    <label><input value="Venus" name="planet" class="uk-checkbox" type="checkbox">Venus</label>
-                                    <label><input value="Mars" name="planet" class="uk-checkbox" type="checkbox">Mars</label>
-                                    <label><input value="Neptune" name="planet" class="uk-checkbox" type="checkbox">Neptune</label>
+                                    <label><input value="Jupiter" name="planet" class="uk-checkbox" type="checkbox"><span class="uk-margin-small-left">Jupiter</span></label>
+                                    <label><input value="Mercury" name="planet" class="uk-checkbox" type="checkbox"><span class="uk-margin-small-left">Mercury</span></label>
+                                    <label><input value="Uranus" name="planet" class="uk-checkbox" type="checkbox"><span class="uk-margin-small-left">Uranus</span></label>
+                                    <label><input value="Venus" name="planet" class="uk-checkbox" type="checkbox"><span class="uk-margin-small-left">Venus</span></label>
+                                    <label><input value="Mars" name="planet" class="uk-checkbox" type="checkbox"><span class="uk-margin-small-left">Mars</span></label>
+                                    <label><input value="Neptune" name="planet" class="uk-checkbox" type="checkbox"><span class="uk-margin-small-left">Neptune</span></label>
                                 </div>
                             </div>
                             <div class="uk-width-1-1">
