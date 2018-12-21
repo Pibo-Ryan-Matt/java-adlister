@@ -236,7 +236,6 @@ width: 100%;
     width: 170px;
     border-radius: 20px;
 }
-
 /*spaceSHip*/
 
 .spaceShip{
@@ -304,4 +303,27 @@ footer ul li:hover{
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: orange; }
+}
+/*Ads Index Page*/
+
+.ad-cat {
+    display: inline;
+    float: right;
+    margin-top: 0
+}
+
+.ad-title{display:inline;}
+
+.search-btn{
+    position: relative;
+    left: 56%;
+    bottom: 45%;
+}
+
+.ad-desc{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 100px;
+    white-space: inherit;
+    margin-bottom: 0;
 }

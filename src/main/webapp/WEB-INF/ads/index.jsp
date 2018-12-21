@@ -11,28 +11,36 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="uk-container">
-    <h1>Here Are all the ads!</h1>
 
-    <div class="uk-margin">
-        <form action="/search" method="POST">
-            <input class="uk-input" type="text" placeholder="Search" name="search">
-            <input type="hidden" style="display: none" name="searchLocation" value="1" />
-            <button uk-icon="search" type="submit"></button>
-        </form>
-        <form action="/ads" method="GET">
-            <button class="uk-button uk-button-primary" type="submit">View All</button>
-        </form>
-    </div>
+    <section class="uk-margin-bottom">
+        <h1 class="uk-text-center">Space Listing</h1>
+        <div uk-grid class="uk-child-width-1-3 uk-text-center">
+            <form class="uk-width-1-6@m uk-width-1-1@s" action="/ads" method="GET">
+                <button class="uk-button uk-button-primary" type="submit">View All</button>
+            </form>
+            <form class="uk-margin-xlarge-left uk-width-1-2" action="/search" method="POST">
+                <input class="uk-input" type="text" placeholder="Search" name="search">
+                <input type="hidden" style="display: none" name="searchLocation" value="1" />
+                <button class="search-btn" uk-icon="search" type="submit"></button>
+            </form>
+        </div>
+    </section>
 
-    <c:forEach var="ad" items="${ads}">
-        <form action="" method="POST" id="adForm${ad.id}">
-            <div class="uk-padding uk-background-muted uk-column-1-2 uk-column-divider" onclick="javascript:document.getElementById('adForm${ad.id}').submit();">
-                <h2>${ad.title}</h2>
-                <p>${ad.description}</p>
-                <input type="hidden" style="display: none" name="selected-ad-id" value="${ad.id}" />
-            </div>
-        </form>
-    </c:forEach>
+
+    <section uk-grid class="uk-child-width-1-2@s uk-child-width-1-3@m">
+        <c:forEach var="ad" items="${ads}">
+            <form action="" method="POST" id="adForm${ad.id}">
+                <div class="uk-card-body uk-card-secondary" onclick="javascript:document.getElementById('adForm${ad.id}').submit();">
+                    <div>
+                        <h2 class="ad-title uk-card-title">${ad.title}</h2>
+                        <h6 class="ad-cat">${ad.category}</h6>
+                    </div>
+                    <p class="ad-desc">${ad.description}</p><span>...</span>
+                    <input type="hidden" style="display: none" name="selected-ad-id" value="${ad.id}" />
+                </div>
+            </form>
+        </c:forEach>
+    </section>
 </div>
 
 </body>
