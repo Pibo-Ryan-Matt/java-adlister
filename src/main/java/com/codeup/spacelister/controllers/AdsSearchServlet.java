@@ -23,8 +23,10 @@ public class AdsSearchServlet extends HttpServlet {
         if (searchLocation.equalsIgnoreCase("1")){
             req.setAttribute("ads", DaoFactory.getAdsDao().search(searchTerm, 1));
 
-        } else {
+        } else if (searchLocation.equalsIgnoreCase("2")){
             req.setAttribute("ads", DaoFactory.getAdsDao().search(searchTerm, 2));
+        } else {
+            req.setAttribute("ads", DaoFactory.getAdsDao().search(searchTerm, 3));
         }
 
 
