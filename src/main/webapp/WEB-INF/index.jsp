@@ -43,7 +43,7 @@
     <div  class="uk-child-width-expand@s  main uk-grid planetSide">
 
         <div class="uk-width-1-2@m uk-margin-large-top uk-margin-large-bottom uk-text-center " uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
-            <h1 class="uk-width-1-1@m uk-padding-small">Choose your location</h1>
+            <h1 class="uk-width-1-1@m uk-padding-small">CHOOSE BY LOCATION</h1>
 
 
             <ul class="uk-thumbnav uk-margin-large-left uk-margin-large-top uk-padding-small">
@@ -64,7 +64,7 @@
         </div>
 
         <div class="uk-margin-large-top uk-margin-large-bottom categories uk-width-1-2@l uk-text-center" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
-            <h1 class="uk-width-1-1@m uk-margin-large-left uk-padding-small">Choose your location</h1>
+            <h1 class="uk-width-1-1@m uk-margin-large-left uk-padding-small">CHOOSE BY CATEGORY</h1>
 
             <div>
                 <form action="/search" method="POST">
@@ -106,9 +106,6 @@
 
     </div>
     <div class="uk-grid uk-child-width-expand@s">
-        <div class="humanMsg">
-            <label></label>
-        </div>
 
         <div class="rocket">
           <img src="https://i.ibb.co/Zf0gpty/rocket.png" alt="rocket" border="0" />
@@ -119,10 +116,11 @@
             <div class="smoke"></div>
             <div class="smoke"></div>
             <div class="smoke"></div>
-            <div class="smoke"></div>
-              <div class="smoke"></div>
+            <div class=""></div>
+              <div class=""></div>
 
           </div>
+
 
         </div>
         <div>

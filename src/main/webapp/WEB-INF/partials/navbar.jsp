@@ -5,7 +5,7 @@
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
                 <li><a href="/">Home</a></li>
-                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
             </ul>
         </div>
                 <div class="uk-navbar-center">
