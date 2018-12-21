@@ -9,6 +9,7 @@
 
 </head>
 <body>
+<div class="wraper">
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
     <canvas id="bgCanvas">
@@ -46,19 +47,19 @@
 
 
             <ul class="uk-thumbnav uk-margin-large-left uk-margin-large-top uk-padding-small">
-                <li class="planetFloat"><a href="#"><img src="http://pluspng.com/img-png/jupiter-planet-png-file-jupiter-transparent-png-779.png" width="100" alt="">Jupiter</a></li>
+                <li class="planetFloat"><a href="#"><img src="http://pluspng.com/img-png/jupiter-planet-png-file-jupiter-transparent-png-779.png" width="100" alt=""><label>Jupiter</label></a></li>
 
-                <li class="planetFloat"><a href="#"><img src="http://wiki.bacterialtakeover.com/images/4/41/Mercury.png" width="100" alt="">Mercury</a></li>
+                <li class="planetFloat"><a href="#"><img src="http://wiki.bacterialtakeover.com/images/4/41/Mercury.png" width="100" alt=""><label>Mercury</label></a></li>
             </ul>
 
         <ul class="uk-thumbnav uk-margin-large-left uk-margin-medium-top uk-padding-small">
-                <li class="planetFloat"><a href="#"><img src="https://vignette.wikia.nocookie.net/diepio/images/6/6d/Uranus_spacepedia.png/revision/latest?cb=20180601142434" width="100" alt="">Uranus</a></li>
-                 <li class="planetFloat"><a href="#"><img src="https://vignette.wikia.nocookie.net/spongebob/images/f/f4/3D_Venus.png/revision/latest?cb=20181125160841" width="100" alt="">Venus</a></li>
+                <li class="planetFloat"><a href="#"><img src="https://vignette.wikia.nocookie.net/diepio/images/6/6d/Uranus_spacepedia.png/revision/latest?cb=20180601142434" width="100" alt=""><label>Uranus</label></a></li>
+                 <li class="planetFloat"><a href="#"><img src="https://vignette.wikia.nocookie.net/spongebob/images/f/f4/3D_Venus.png/revision/latest?cb=20181125160841" width="100" alt=""><label>Venus</label></a></li>
             </ul>
         <ul class="uk-thumbnav uk-margin-large-left uk-margin-medium-top uk-padding-small">
 
-                <li class="planetFloat"><a href="#"><img src="https://vignette.wikia.nocookie.net/diepio/images/0/0e/Mars_spacepedia.png/revision/latest?cb=20180601141159" width="100" alt="">Mars</a></li>
-                <li class="planetFloat"><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/d/da/3D_Neptune.png" width="100" alt="">Neptune</a></li>
+                <li class="planetFloat"><a href="#"><img src="https://vignette.wikia.nocookie.net/diepio/images/0/0e/Mars_spacepedia.png/revision/latest?cb=20180601141159" width="100" alt=""><label>Mars</label></a></li>
+                <li class="planetFloat"><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/d/da/3D_Neptune.png" width="100" alt=""><label>Neptune</label></a></li>
         </ul>
         </div>
 
@@ -105,24 +106,8 @@
 
     </div>
     <div class="uk-grid uk-child-width-expand@s">
-        <div>
-            <div class="ufo">
-                <div class="monster" style="color: #7cb342">
-                    <div class="body">
-                        <div class="ear"></div>
-                        <div class="ear"></div>
-                        <div class="vampi-mouth">
-                            <div class="vampi-tooth"></div>
-                        </div>
-                    </div>
-                    <div class="eye-lid">
-                        <div class="eyes">
-                            <div class="eye"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="humanMsg">
+            <label></label>
         </div>
 
         <div class="rocket">
@@ -140,11 +125,16 @@
           </div>
 
         </div>
-        <div></div>
+        <div>
+          <img src="https://i.ibb.co/L9QzvSw/spaceship.png" alt="spaceship" class="spaceShip" border="0">
+           <img src="https://i.ibb.co/ZdX3F4P/h.png" alt="h" class="humanIcon floatInfinit" border="0">
+
+                   </div>
     </div>
 
 
     <jsp:include page="/WEB-INF/partials/footer.jsp" />
+</div>
 
     <jsp:include page="/WEB-INF/partials/scripts.jsp" />
 
