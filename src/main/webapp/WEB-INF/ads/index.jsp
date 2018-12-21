@@ -28,7 +28,7 @@
 
 
     <section uk-grid class="uk-child-width-1-2@s uk-child-width-1-3@m">
-        <c:forEach var="ad" items="${ads}">
+        <c:forEach var="ad" items="${sessionScope.ads}">
             <form action="" method="POST" id="adForm${ad.id}">
                 <div class="uk-card-body uk-card-secondary" onclick="javascript:document.getElementById('adForm${ad.id}').submit();">
                     <div>

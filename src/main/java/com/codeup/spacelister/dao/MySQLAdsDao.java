@@ -61,7 +61,7 @@ public class MySQLAdsDao implements Ads {
             } else if (searchLocation == 2){
                 insertQuery = "SELECT * FROM ad WHERE category LIKE ?";
             } else {
-                insertQuery = "SELECT * FROM ad WHERE id in (select ad_id from ad_planet WHERE planet_id in (select id from planet WHERE name = ? ))";
+                insertQuery = "SELECT * FROM ad WHERE id in (select ad_id from ad_planet WHERE planet_id in (select id from planet WHERE name LIKE ? ))";
             }
 
             PreparedStatement stmt = connection.prepareStatement(insertQuery);

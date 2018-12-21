@@ -21,16 +21,16 @@ public class AdsSearchServlet extends HttpServlet {
         String searchTerm = (String) req.getSession().getAttribute("searchTerm");
 
         if (searchLocation.equalsIgnoreCase("1")){
-            req.setAttribute("ads", DaoFactory.getAdsDao().search(searchTerm, 1));
-
+            req.getSession().setAttribute("ads", DaoFactory.getAdsDao().search(searchTerm, 1));
         } else if (searchLocation.equalsIgnoreCase("2")){
-            req.setAttribute("ads", DaoFactory.getAdsDao().search(searchTerm, 2));
+            req.getSession().setAttribute("ads", DaoFactory.getAdsDao().search(searchTerm, 2));
+        } else if (searchLocation.equalsIgnoreCase("3")){
+            req.getSession().setAttribute("ads", DaoFactory.getAdsDao().search(searchTerm, 3));
         } else {
-            req.setAttribute("ads", DaoFactory.getAdsDao().search(searchTerm, 3));
+            req.getSession().setAttribute("ads", DaoFactory.getAdsDao().all());
         }
 
-
-        req.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(req, resp);
+        resp.sendRedirect("/ads");
 
 
     }

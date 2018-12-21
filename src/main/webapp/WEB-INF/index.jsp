@@ -47,57 +47,43 @@
 
 
                 <div class="uk-thumbnav uk-margin-large-left uk-margin-large-top uk-padding-small">
-                    <div>
-                        <form action="/search" method="POST">
-                            <input type="hidden" style="display: none" name="searchLocation" value="2" />
-                            <input type="hidden" style="display: none" name="search" value="Space Items" />
-
-                            <div class="planetFloat"><a href="#"><img src="http://pluspng.com/img-png/jupiter-planet-png-file-jupiter-transparent-png-779.png" width="100" alt=""><label>Jupiter</label></a></div>
-                        </form>
-                    </div>
-                    <div>
-                        <form action="/search" method="POST">
-                            <input type="hidden" style="display: none" name="searchLocation" value="2" />
-                            <input type="hidden" style="display: none" name="search" value="Space Items" />
-
-
-                            <div class="planetFloat"><a href="#"><img src="http://wiki.bacterialtakeover.com/images/4/41/Mercury.png" width="100" alt=""><label>Mercury</label></a></div>
-                        </form>
-                    </div>
+                    <form action="/search" method="POST">
+                        <input type="hidden" style="display: none" name="searchLocation" value="3" />
+                        <input type="hidden" style="display: none" name="search" value="Jupiter" />
+                        <button  class="custom-btn" type="submit"><span class="planetFloat"><img src="http://pluspng.com/img-png/jupiter-planet-png-file-jupiter-transparent-png-779.png" width="100" alt=""><label class="planet-label">Jupiter</label></span></button>
+                    </form>
+                    <form action="/search" method="POST">
+                        <input type="hidden" style="display: none" name="searchLocation" value="3" />
+                        <input type="hidden" style="display: none" name="search" value="Mercury" />
+                        <button class="custom-btn" type="submit"><span class="planetFloat"><img src="http://wiki.bacterialtakeover.com/images/4/41/Mercury.png" width="100" alt=""><label class="planet-label">Mercury</label></span></button>
+                    </form>
                 </div>
 
                 <div class="uk-thumbnav uk-margin-large-left uk-margin-medium-top uk-padding-small">
-                    <div>
-                        <form action="/search" method="POST">
-                            <input type="hidden" style="display: none" name="searchLocation" value="2" />
-                            <input type="hidden" style="display: none" name="search" value="Space Items" />
-                            <div class="planetFloat"><a href="#"><img src="https://vignette.wikia.nocookie.net/diepio/images/6/6d/Uranus_spacepedia.png/revision/latest?cb=20180601142434" width="100" alt=""><label>Uranus</label></a></div>
-                        </form>
-                    </div>
-                    <div>
-                        <form action="/search" method="POST">
-                            <input type="hidden" style="display: none" name="searchLocation" value="2" />
-                            <input type="hidden" style="display: none" name="search" value="Space Items" />
-                            <div class="planetFloat"><a href="#"><img src="https://vignette.wikia.nocookie.net/spongebob/images/f/f4/3D_Venus.png/revision/latest?cb=20181125160841" width="100" alt=""><label>Venus</label></a></div>
-                        </form>
-                    </div>
+                    <form action="/search" method="POST">
+                        <input type="hidden" style="display: none" name="searchLocation" value="3" />
+                        <input type="hidden" style="display: none" name="search" value="Uranus" />
+                        <button class="custom-btn" type="submit"><span class="planetFloat"><img src="https://vignette.wikia.nocookie.net/diepio/images/6/6d/Uranus_spacepedia.png/revision/latest?cb=20180601142434" width="100" alt=""><label class="planet-label">Uranus</label></span></button>
+                    </form>
+
+                    <form action="/search" method="POST">
+                        <input type="hidden" style="display: none" name="searchLocation" value="3" />
+                        <input type="hidden" style="display: none" name="search" value="Venus" />
+                        <button class="custom-btn" type="submit"><span class="planetFloat"><img src="https://vignette.wikia.nocookie.net/spongebob/images/f/f4/3D_Venus.png/revision/latest?cb=20181125160841" width="100" alt=""><label class="planet-label">Venus</label></span></button>
+                    </form>
                 </div>
                 <div class="uk-thumbnav uk-margin-large-left uk-margin-medium-top uk-padding-small">
-                    <div>
-                        <form action="/search" method="POST">
-                            <input type="hidden" style="display: none" name="searchLocation" value="2" />
-                            <input type="hidden" style="display: none" name="search" value="Space Items" />
-                            <div class="planetFloat"><a href="#"><img src="https://vignette.wikia.nocookie.net/diepio/images/0/0e/Mars_spacepedia.png/revision/latest?cb=20180601141159" width="100" alt=""><label>Mars</label></a></div>
-                        </form>
-                    </div>
-                    <div>
-                        <form action="/search" method="POST">
-                            <input type="hidden" style="display: none" name="searchLocation" value="2" />
-                            <input type="hidden" style="display: none" name="search" value="Space Items" />
+                    <form action="/search" method="POST">
+                        <input type="hidden" style="display: none" name="searchLocation" value="3" />
+                        <input type="hidden" style="display: none" name="search" value="Mars" />
+                        <button class="custom-btn" type="submit"><span class="planetFloat"><img src="https://vignette.wikia.nocookie.net/diepio/images/0/0e/Mars_spacepedia.png/revision/latest?cb=20180601141159" width="100" alt=""><label class="planet-label">Mars</label></span></button>
+                    </form>
+                    <form action="/search" method="POST">
+                        <input type="hidden" style="display: none" name="searchLocation" value="3" />
+                        <input type="hidden" style="display: none" name="search" value="Neptune" />
 
-                            <div class="planetFloat"><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/d/da/3D_Neptune.png" width="100" alt=""><label>Neptune</label></a></div>
-                        </form>
-                    </div>
+                        <button class="custom-btn" type="submit"><span class="planetFloat"><img src="https://upload.wikimedia.org/wikipedia/commons/d/da/3D_Neptune.png" width="100" alt=""><label class="planet-label">Neptune</label></span></button>
+                    </form>
                 </div>
             </div>
 

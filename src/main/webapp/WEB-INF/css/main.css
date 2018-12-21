@@ -155,6 +155,10 @@ width: 100%;
     border-style: hidden;
 }
 
+.planet-label {
+    font-size: large;
+}
+
 /*// rocket*/
 .rocket img{
     height: 350px;

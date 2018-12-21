@@ -8,8 +8,11 @@
                 <li><a href="/about">About</a></li>
             </ul>
         </div>
-                <div class="uk-navbar-center">
-            <a class="uk-navbar-item uk-logo" href="/ads">Space Lister</a>
+        <div class="uk-navbar-center">
+            <form action="/search" method="POST">
+                <input type="hidden" style="display: none" name="searchLocation" value="0" />
+                <button type="submit" class="custom-btn uk-navbar-item uk-logo" >Space Lister</button>
+            </form>
         </div>
         <div class="uk-navbar-right">
             <ul class="uk-navbar-nav">
